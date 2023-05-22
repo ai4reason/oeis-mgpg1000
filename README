@@ -1,11 +1,15 @@
 This directory contains Megalodon and Proofgold versions
 of 1000 oeis related conjectures, each of which currently
-has a bounty of 1 Proofgold bar (as of May 2023).
+has a bounty of 1 Proofgold bar (as of May 2023). 
+The full OEIS ATP benchmark in the SMT format is available at
+https://github.com/ai4reason/oeis-atp-benchmark .
 
 Megalodon 1.10 is available at
 http://grid01.ciirc.cvut.cz/~chad/megalodon-1.10.tgz
+and
+https://github.com/ai4reason/Megalodon .
 
-Proofgold Lava is available at proofgold.net.
+Proofgold Lava is available at http://proofgold.net.
 
 Each of the 1000 problems has a name A<num> where <num>
 is the number of an associated oeis sequence.
