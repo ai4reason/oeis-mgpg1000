@@ -1,0 +1,2076 @@
+This directory contains Megalodon and Proofgold versions
+of 1000 oeis related conjectures, each of which currently
+has a bounty of 1 Proofgold bar (as of May 2023).
+
+Megalodon 1.10 is available at
+http://grid01.ciirc.cvut.cz/~chad/megalodon-1.10.tgz
+
+Proofgold Lava is available at proofgold.net.
+
+Each of the 1000 problems has a name A<num> where <num>
+is the number of an associated oeis sequence.
+Each problem asserts that one (conjectured) way of generating
+the sequence is equal to another (conjectured) way of generating
+the sequence.
+
+A<num>.mg : The Megalodon version with the conjecture.
+
+For example, A1019.mg is one such file.
+
+Megalodon can be used to check a document as follows:
+
+megalodon -owned ownedSep192022 -I PfgEAug2022Preamble.mgs A1019.mg
+
+Megalodon can produce a Proofgold file (draft document).
+
+megalodon -owned ownedSep192022 -I PfgEAug2022Preamble.mgs -pfg A1019.mg > A1019.pfg
+
+The particular files ownedSep192022 and PfgEAug2022Preamble.mgs
+are not vital. ownedSep192022 can be any file that lists
+a sufficient amount of information about what has been
+published into the Proofgold blockchain at a particular moment.
+PfgEAug2022Preamble.mgs must only contain enough of the
+Megalodon library to know about logic and the integers.
+It may also contain any other information published into the Proofgold
+blockchain at a particular moment.
+
+If the bounty for A<num> has not been claimed, anyone can prove the
+theorem in A<num>.mg to claim the bounty.  For example, if a user
+filled in the missing proof of A1019.mg and then created A1019.pfg as
+above, then the user could claim the bounty by publishing A1019.pfg
+into the Proofgold blockchain.  This requires using the Proofgold
+commands readdraft, addnonce, addpublisher, commitdraft and
+publishdraft. Once the draft has been published, all available
+bounties on A1019 can be collected using the Proofgold command
+collectbounties. More information about how to publish documents
+and collect bounties is available here:
+
+https://prfgld.github.io/publishing.html
+
+It is not necessary to use Megalodon to produce the Proofgold document.
+If another theorem prover is used to prove the conjecture, all
+that is required is to have that theorem prover produce an appropriate
+Proofgold document (with a corresponding proof term as part of the
+document).
+
+There are additionally 50 Megalodon files named Athe1000_part??.mg
+and 50 corresponding Proofgold files Athe1000_bounty1_part??.pfg.
+Each of these has 20 of the A<num> conjectures. The 50 Proofgold
+drafts were published into the Proofgold blockchain in May 2023.
+
+There is currently an experimental block explorer you may be
+able to use to look at transations publishing documents or to check
+if a bounty at an address has been claimed.
+The following is an example of a transaction publishing a document
+(in this case, Athe1000_bounty1_part00.pfg):
+
+https://project-smart.uibk.ac.at/pgbce/q.php?b=44a019d340d2b8e767ce424625a94ed0daf5cbf5520c22f9d2c3fc220dd67b92
+
+Each of the A<num> conjectures has an associated Proofgold address.
+The Proofgold query command can be used to check if the bounty is
+still at the address (or if it has already been claimed).  You may
+also be able to use the block explorer to check if the bounty is still
+there.  Below is a list of the A<num> problems and their corresponding
+proofgold address, followed by a line with a url to the experimental
+block explorer.
+
+A100062 TMYFaU88hMXPEiYz5VSRMb7mN6KUqQhiMoX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYFaU88hMXPEiYz5VSRMb7mN6KUqQhiMoX
+A1022 TMZGbrE7pXS4HYGn3r2P5TUAauKBCQgjWLn
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZGbrE7pXS4HYGn3r2P5TUAauKBCQgjWLn
+A103458 TMKMF6xgtkJW1ZmigrbzxAfbfE9aH4Hzd9f
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKMF6xgtkJW1ZmigrbzxAfbfE9aH4Hzd9f
+A1026 TMK7jf7hBTZXkgAswtyUmPE3XGfZpzV5QPf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMK7jf7hBTZXkgAswtyUmPE3XGfZpzV5QPf
+A1018 TMa2jPiH5U6JwdzPUym2hKSqMc8Y5zyzq5n
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMa2jPiH5U6JwdzPUym2hKSqMc8Y5zyzq5n
+A101485 TMKYckRHM1W3ZSeAHL4iWyBd5UaCsmbfUa3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKYckRHM1W3ZSeAHL4iWyBd5UaCsmbfUa3
+A102714 TMKDDxGcLDtEYwaXn6q5aAPDazNNH7Zob6X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKDDxGcLDtEYwaXn6q5aAPDazNNH7Zob6X
+A100089 TMSKojU7KCUAP4FTcgkHVioKhTWUeAXuDz3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSKojU7KCUAP4FTcgkHVioKhTWUeAXuDz3
+A1023 TMRKXt5aYbQabYCobvE8toCu5fY2qH7cuxf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRKXt5aYbQabYCobvE8toCu5fY2qH7cuxf
+A1021 TMacuuLMMQNzAYk2hmYoiHjc7dzqWjcGC8y
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMacuuLMMQNzAYk2hmYoiHjc7dzqWjcGC8y
+A1019 TMJt2b7SPwgnzbBnSZf4mwtUNSa6cP7nS5V
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJt2b7SPwgnzbBnSZf4mwtUNSa6cP7nS5V
+A101099 TMQJPtw6YAtYN6eDcm5WBCn5XFe243FyNsM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQJPtw6YAtYN6eDcm5WBCn5XFe243FyNsM
+A1025 TMLQpyMskWNzaLiTvQLhHimC3r6zw3PHwNN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLQpyMskWNzaLiTvQLhHimC3r6zw3PHwNN
+A10052 TMUM3UCbXY2ZkbDN1fcMzPm7odusjVvfyFS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUM3UCbXY2ZkbDN1fcMzPm7odusjVvfyFS
+A101609 TMGnrinxjTrD5PBirEakVt6CY9r1T8wEhhU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGnrinxjTrD5PBirEakVt6CY9r1T8wEhhU
+A1029 TMUGBkxKB4FqZfZWQBnQWRtnzssDZVQLSV4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUGBkxKB4FqZfZWQBnQWRtnzssDZVQLSV4
+A103845 TMUuggK9gF6yfeprJan4q3YYNAYxh4QL6RL
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUuggK9gF6yfeprJan4q3YYNAYxh4QL6RL
+A103213 TMcGwN2xs9nRafnhyAxKoRFzhcj5Ey1v9cC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcGwN2xs9nRafnhyAxKoRFzhcj5Ey1v9cC
+A101927 TMUjRUDzNqwX4Qky3fdiBW3SU9SWUwLvP7G
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUjRUDzNqwX4Qky3fdiBW3SU9SWUwLvP7G
+A101090 TMS9gwtxNj7MG8ZUhYY4sZwroUnCbog6XAa
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMS9gwtxNj7MG8ZUhYY4sZwroUnCbog6XAa
+A1099 TMMqCcoqV1p2ETFBVj2yAUxxPqe2nCWs2JL
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMqCcoqV1p2ETFBVj2yAUxxPqe2nCWs2JL
+A107392 TMLcPTTF99cMG4baxzokEH2ZoYibcQ7ApuM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLcPTTF99cMG4baxzokEH2ZoYibcQ7ApuM
+A10842 TMdhNcnFqpCBwFeLXGzdJkFYrKxN9gQprEB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdhNcnFqpCBwFeLXGzdJkFYrKxN9gQprEB
+A109792 TMFZfpcseRProCHeQCdEdrRp7ht8hNztLdZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFZfpcseRProCHeQCdEdrRp7ht8hNztLdZ
+A10798 TMHy1fjB1piFmfc9zrhaDSua88w5YvnMQkA
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHy1fjB1piFmfc9zrhaDSua88w5YvnMQkA
+A104344 TMSQLAhDeWURAw7GSb1k4QjRQhF3j3tkycq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSQLAhDeWURAw7GSb1k4QjRQhF3j3tkycq
+A104462 TMQXgbL1cjSuX953EhYg5wwKGbtjcQ24Rf6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQXgbL1cjSuX953EhYg5wwKGbtjcQ24Rf6
+A114182 TMZWQTkaujAQR3EdbS8msnbrzQ9jwQk23CQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZWQTkaujAQR3EdbS8msnbrzQ9jwQk23CQ
+A110224 TMK6LDifYJ2brQMb74F9aCBTchNZpF4NeBT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMK6LDifYJ2brQMb74F9aCBTchNZpF4NeBT
+A1147 TMMp62hPtwznGXRHf87GZrUHW2V62Dr4Ms3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMp62hPtwznGXRHf87GZrUHW2V62Dr4Ms3
+A10800 TMHRinAYDWB41cwNXW5XQoM6wJhxy7Zrm3f
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHRinAYDWB41cwNXW5XQoM6wJhxy7Zrm3f
+A109808 TMcHiiKjBXnFdD1W9DFhuReHMrYf5aQRXKb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcHiiKjBXnFdD1W9DFhuReHMrYf5aQRXKb
+A10797 TMN3iP8mSSaKS1GJn9JYxyZNhow7R8bAeM2
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMN3iP8mSSaKS1GJn9JYxyZNhow7R8bAeM2
+A109105 TMUTdkjnkrWReXNLhXfvfr3wt5GJp6Jy1T9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUTdkjnkrWReXNLhXfvfr3wt5GJp6Jy1T9
+A10799 TMYUM4zqwBFYk4trVDkf82mG4vtoh8nTyZW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYUM4zqwBFYk4trVDkf82mG4vtoh8nTyZW
+A111424 TMQereThww5MjcLH1dBYh6bqHRjpx8Te7HD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQereThww5MjcLH1dBYh6bqHRjpx8Te7HD
+A112368 TMdWX1YT9FToHxtG5vWGVnBLFjGcFgcrW3L
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdWX1YT9FToHxtG5vWGVnBLFjGcFgcrW3L
+A103974 TMPR83mxujmH1CNeHmHYiBrzu2PWADDcNv5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPR83mxujmH1CNeHmHYiBrzu2PWADDcNv5
+A110451 TMVgeGVd3d81ea9CfUTNfXByi6ZP1JCS3Uy
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVgeGVd3d81ea9CfUTNfXByi6ZP1JCS3Uy
+A10751 TMbgxY63KtRGkeS5S6taMwADcMRKyeCNRHa
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbgxY63KtRGkeS5S6taMwADcMRKyeCNRHa
+A121254 TMYM9vCb2K7wFpPHgjfvaVY85XP6EhThm9k
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYM9vCb2K7wFpPHgjfvaVY85XP6EhThm9k
+A11922 TMQsQveycequRZoWdXzYh8hgig8rGAoHQKM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQsQveycequRZoWdXzYh8hgig8rGAoHQKM
+A119913 TMWNNUWxRTeJKqR8vEFwJL3RWZBV8EWnfxJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWNNUWxRTeJKqR8vEFwJL3RWZBV8EWnfxJ
+A121200 TMXnMtCYdSn3Lcyx2p2yfQ1GfnFzuuarQ1p
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXnMtCYdSn3Lcyx2p2yfQ1GfnFzuuarQ1p
+A119837 TMb2aXHcxR7yBC8jZMg1WrjPUFqjo8AoUdS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMb2aXHcxR7yBC8jZMg1WrjPUFqjo8AoUdS
+A1193 TMbwiGc9RWFqfgcQGByJDDb7LuVxC6GkRmR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbwiGc9RWFqfgcQGByJDDb7LuVxC6GkRmR
+A123828 TMWVLhX7SZiKXpiittuN4mugAprrpPACBHK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWVLhX7SZiKXpiittuN4mugAprrpPACBHK
+A11781 TMLPVsqP95btF6s1mKqpQBkXpVTw4vDD3XE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLPVsqP95btF6s1mKqpQBkXpVTw4vDD3XE
+A120773 TMJUWk99aMLtRUmWjf2fBVzw52uXKkbpj2N
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJUWk99aMLtRUmWjf2fBVzw52uXKkbpj2N
+A120802 TMd8QatiCFTpU19fPkV9Q5AMgSuJiXTRYYB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMd8QatiCFTpU19fPkV9Q5AMgSuJiXTRYYB
+A121499 TMa35MKNouQGjn7ze43Jb7WpPorEy2h7jXG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMa35MKNouQGjn7ze43Jb7WpPorEy2h7jXG
+A118005 TMTKvSKhTQzwC5TwjKjqNhJwYseGaCUaXVP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTKvSKhTQzwC5TwjKjqNhJwYseGaCUaXVP
+A11557 TMRPzT7BBn5fNx13TsGnEc7RBALHXDC8tXs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRPzT7BBn5fNx13TsGnEc7RBALHXDC8tXs
+A120718 TMKBxzCr3SdF5H74eYbejz7Ypk1gd3qszuX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKBxzCr3SdF5H74eYbejz7Ypk1gd3qszuX
+A121628 TMHUa1kP8LHtSzVTBAXLiDw8ubbwfxMEjdn
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHUa1kP8LHtSzVTBAXLiDw8ubbwfxMEjdn
+A124099 TMPccuYkZ8FMhTHJYQfn7ZgVwECKEsdctbj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPccuYkZ8FMhTHJYQfn7ZgVwECKEsdctbj
+A121555 TMXjuQsBBCwy19cqXYrg9zKXy3EKtxz8gLp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXjuQsBBCwy19cqXYrg9zKXy3EKtxz8gLp
+A123332 TMGj5aXgsiyk8Eq5dQMYmjZvpH4QFSE321C
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGj5aXgsiyk8Eq5dQMYmjZvpH4QFSE321C
+A116164 TMK3VkG2Y294WaDW1TRZi2FNtLHukqP2cjC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMK3VkG2Y294WaDW1TRZi2FNtLHukqP2cjC
+A11943 TMdaDik7UQ3rwstq1wopxg7PYYLCV326red
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdaDik7UQ3rwstq1wopxg7PYYLCV326red
+A128802 TMbom29tsd34stiNtFBNVX6LRLiA78bcCe6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbom29tsd34stiNtFBNVX6LRLiA78bcCe6
+A127859 TMT8oCUmwAsXMxZa6W5zgtZ3doDHJ7GCuZy
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMT8oCUmwAsXMxZa6W5zgtZ3doDHJ7GCuZy
+A132371 TMGj9iFLeGBzShG8K9ffsiBXXHTiYVtbUUV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGj9iFLeGBzShG8K9ffsiBXXHTiYVtbUUV
+A128800 TMRq6FcuF7UM8EBYmBRtuEYAN6aKdNH3fcs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRq6FcuF7UM8EBYmBRtuEYAN6aKdNH3fcs
+A1308 TMVWJtDgir5qMRBJ8nSkwkan3XmJFmfYAMJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVWJtDgir5qMRBJ8nSkwkan3XmJFmfYAMJ
+A130652 TMQ64EdXt9xuhau6Kiu3sTRB3Jaj77uXJnB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQ64EdXt9xuhau6Kiu3sTRB3Jaj77uXJnB
+A127212 TMR8xhtVeCFVVNMsUgw6h84wpXyAmLNizmU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMR8xhtVeCFVVNMsUgw6h84wpXyAmLNizmU
+A127858 TMZCeV6KpBn1ZQcFKVuJY41276tbeX4gCY7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZCeV6KpBn1ZQcFKVuJY41276tbeX4gCY7
+A127429 TMQ5ZKekE5GZR34rQdRNZ8xLcokjV9C237D
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQ5ZKekE5GZR34rQdRNZ8xLcokjV9C237D
+A124657 TMW9tFuTPusy8mVoXmAznAiQKBud1X6C2am
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMW9tFuTPusy8mVoXmAznAiQKBud1X6C2am
+A127595 TMVYKe4YrTz3tyF1bEpGPhVbQemjLSNYde3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVYKe4YrTz3tyF1bEpGPhVbQemjLSNYde3
+A1277 TMbbjMSzR6Y92oZ3p8xHPjUojm9XudjNhdH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbbjMSzR6Y92oZ3p8xHPjUojm9XudjNhdH
+A128803 TMYELPH6Tr7ZNjTzatX37888uWyNyThZiyy
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYELPH6Tr7ZNjTzatX37888uWyNyThZiyy
+A128790 TMPm7iTdU62MNBq2RQ7rUN1UdSGyMKSgpQT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPm7iTdU62MNBq2RQ7rUN1UdSGyMKSgpQT
+A132911 TMXoCAmbFwUhQQvTw36fkvLEknYLvDfzc3f
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXoCAmbFwUhQQvTw36fkvLEknYLvDfzc3f
+A128965 TMVN2rmp9nyP7n1SJ3f71awg9YcUq78qLrN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVN2rmp9nyP7n1SJ3f71awg9YcUq78qLrN
+A1240 TMZ74nynxP6TgqVxQNjN3wv1rXGjUcB6JYb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZ74nynxP6TgqVxQNjN3wv1rXGjUcB6JYb
+A133073 TMWd9aHwJPtUmAgUJLj6aZK6Ldhch2mx1dX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWd9aHwJPtUmAgUJLj6aZK6Ldhch2mx1dX
+A128791 TMGXrjTgEPE96tPXYvcMy2cmHXFGahs4tJy
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGXrjTgEPE96tPXYvcMy2cmHXFGahs4tJy
+A129890 TMWvw15ZmnJsyHA183jGWCh3TgDCTqMLQ55
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWvw15ZmnJsyHA183jGWCh3TgDCTqMLQ55
+A13708 TMHwymTbqR1BoeCUBN9pWQaSYyAesBN8iSA
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHwymTbqR1BoeCUBN9pWQaSYyAesBN8iSA
+A13718 TMPnqCFSuJLDz2Rs734NnQGRaj6omCTYMQQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPnqCFSuJLDz2Rs734NnQGRaj6omCTYMQQ
+A13715 TMKt2QWSZGxqiX5uqUvMJkyvUGYGKH1SJYK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKt2QWSZGxqiX5uqUvMJkyvUGYGKH1SJYK
+A13716 TMTrC84X162xaqbcAdHvd2FFYqujZ1X623i
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTrC84X162xaqbcAdHvd2FFYqujZ1X623i
+A134492 TMYbwvHxZ1hsoJr5ymCDqAQ9Sc2gxchCft8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYbwvHxZ1hsoJr5ymCDqAQ9Sc2gxchCft8
+A133384 TMUy9EBZjUzqV8agaMYi3NxQcb8iTwGNUhc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUy9EBZjUzqV8agaMYi3NxQcb8iTwGNUhc
+A13711 TMM4shFsusgA3koGyoRTEPNz2yMsGoYea8A
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMM4shFsusgA3koGyoRTEPNz2yMsGoYea8A
+A134494 TMZUThpzNJeVPnkjbJaefmt4odHPNh9Q4j4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZUThpzNJeVPnkjbJaefmt4odHPNh9Q4j4
+A13713 TMP7njAChAatjyQmfJECA76p4fVYLtD469s
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMP7njAChAatjyQmfJECA76p4fVYLtD469s
+A13717 TMZgLvAktjnWAt7vRhE1UxBWZrRXHDxRRhW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZgLvAktjnWAt7vRhE1UxBWZrRXHDxRRhW
+A1367 TMT1DfSjAHLKqoRFPwsC14uUbsYNHyf44k7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMT1DfSjAHLKqoRFPwsC14uUbsYNHyf44k7
+A134169 TMVM7gzjWoa1UgTWex7fY95nR4TfaURhYiC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVM7gzjWoa1UgTWex7fY95nR4TfaURhYiC
+A136376 TMY8D6YAo1X3AqBgpy8NHvHHS9tAqcyNdsx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMY8D6YAo1X3AqBgpy8NHvHHS9tAqcyNdsx
+A136516 TMEnxyCKANDJRDczXYXJgjkSDHBz9ePNHey
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEnxyCKANDJRDczXYXJgjkSDHBz9ePNHey
+A13712 TMKffm5e2Zf7Nn5DNrwstuEE68BcBbkYCpF
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKffm5e2Zf7Nn5DNrwstuEE68BcBbkYCpF
+A13719 TMPwCMmuLiKqyB5MzZNK9iE7UjfdAu8X9ja
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPwCMmuLiKqyB5MzZNK9iE7UjfdAu8X9ja
+A13709 TMSQm4HwmE2qARuxWGsrhpU7zKHRQqksSwS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSQm4HwmE2qARuxWGsrhpU7zKHRQqksSwS
+A13710 TMNyWXn2totURY8cGy5rVjeHSsq25CcBXuw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNyWXn2totURY8cGy5rVjeHSsq25CcBXuw
+A1338 TMSve1VYAf5yGYVmKNToZk6mdjCohBoj8bp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSve1VYAf5yGYVmKNToZk6mdjCohBoj8bp
+A13714 TMK2KG4xEzgEVhXMyhX6BioPsyysZYBraMQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMK2KG4xEzgEVhXMyhX6BioPsyysZYBraMQ
+A13739 TMHz5utjSAco4f2njCTH8SiohHYYgb6WKct
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHz5utjSAco4f2njCTH8SiohHYYgb6WKct
+A13735 TMXe9m5XyzVwGHafdgjUmd4FUbixrkjipHR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXe9m5XyzVwGHafdgjUmd4FUbixrkjipHR
+A13734 TMZmVodsYp4tYH5uENCqfqRwhDjMwmjLKMY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZmVodsYp4tYH5uENCqfqRwhDjMwmjLKMY
+A13733 TMagnSU3EVdLhq8KywAbSpBsqbDyWrgzEBn
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMagnSU3EVdLhq8KywAbSpBsqbDyWrgzEBn
+A13731 TMHFw5wgZm35Qyrd4YH6v9UfqZb7ch53S5C
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHFw5wgZm35Qyrd4YH6v9UfqZb7ch53S5C
+A13736 TMR5KN6qt9Nx1TAyTeQ6B1w1ejguyEf6ogc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMR5KN6qt9Nx1TAyTeQ6B1w1ejguyEf6ogc
+A13727 TMaZnkuXu6aofsfj7kB4znWpKGdg9uahFMp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaZnkuXu6aofsfj7kB4znWpKGdg9uahFMp
+A13723 TMFmKSCxy73TriXAF5vo8bUgVAid1RVDcFN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFmKSCxy73TriXAF5vo8bUgVAid1RVDcFN
+A13730 TMcZ51n2ZffToxhhUNDW51QtKtA8yKh9Bto
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcZ51n2ZffToxhhUNDW51QtKtA8yKh9Bto
+A13728 TMHfzhH1gJ3fUEp8WjrZ71PzwfNATdpZNmk
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHfzhH1gJ3fUEp8WjrZ71PzwfNATdpZNmk
+A13722 TMGhBFXZ7uBZnuvQTY64mrdBMeYi9vaqSw6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGhBFXZ7uBZnuvQTY64mrdBMeYi9vaqSw6
+A13738 TMaypfz9KG68snD6WPUDhio75odv7wLkfYU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaypfz9KG68snD6WPUDhio75odv7wLkfYU
+A13720 TMHGJGWu64vvDNJhBzXwEGh2Ze3hAXXkVcq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHGJGWu64vvDNJhBzXwEGh2Ze3hAXXkVcq
+A13732 TMJqv3vnD2KWcWkmTjUj7ZszY5dbFPjX611
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJqv3vnD2KWcWkmTjUj7ZszY5dbFPjX611
+A13724 TMaXj3xhBG4g2yHoHKTNcSxmudWtjXM4WYX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaXj3xhBG4g2yHoHKTNcSxmudWtjXM4WYX
+A13737 TMJSsRyuYjQu2gPJsNLXs2zhGPsXRMFvcZU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJSsRyuYjQu2gPJsNLXs2zhGPsXRMFvcZU
+A13729 TMc3qrNsUDD4PUReC9xPetCiGLxwid6QX6b
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMc3qrNsUDD4PUReC9xPetCiGLxwid6QX6b
+A13726 TMYAS6HzWH5QV3CQRe36mkR2jrP3ijxnZB8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYAS6HzWH5QV3CQRe36mkR2jrP3ijxnZB8
+A13740 TMGkEGDXjR3RjtQDgVz7wCsYoKS7EnwzNfp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGkEGDXjR3RjtQDgVz7wCsYoKS7EnwzNfp
+A13725 TMNZ216YEUkwest6d9vFx1U3N7XXxtz2VUN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNZ216YEUkwest6d9vFx1U3N7XXxtz2VUN
+A13751 TMKncurzricDnyWnAMKUjMCPyHQcBX1URSV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKncurzricDnyWnAMKUjMCPyHQcBX1URSV
+A13742 TMT1SLoBvqs7QwhKPkBMJouzwLnDd1qmgES
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMT1SLoBvqs7QwhKPkBMJouzwLnDd1qmgES
+A13743 TMFNuY7j13438xeKRJ33MtAj4yKc4h4ATsK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFNuY7j13438xeKRJ33MtAj4yKc4h4ATsK
+A13744 TMLk8B2XUgLA4kEFsfKiEubGJygYNGcCCdi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLk8B2XUgLA4kEFsfKiEubGJygYNGcCCdi
+A13766 TMGHjrZ91yEQrgsqv3TPdzBwwXUfEdSrtLp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGHjrZ91yEQrgsqv3TPdzBwwXUfEdSrtLp
+A13752 TMQ1NzvG81615EgqJH4rKDUcWtpY8oGrggL
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQ1NzvG81615EgqJH4rKDUcWtpY8oGrggL
+A13756 TMXLWLfGd88N6Pn2EaRyNYWm8RXNLHmFnqC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXLWLfGd88N6Pn2EaRyNYWm8RXNLHmFnqC
+A13747 TMKjCh2uTEPfokKpUuGJpNXx7ZzNfgCb7HZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKjCh2uTEPfokKpUuGJpNXx7ZzNfgCb7HZ
+A13760 TMNnZ9TqFPhX1ow6N476AvR7qq8cEm5LqyF
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNnZ9TqFPhX1ow6N476AvR7qq8cEm5LqyF
+A13757 TMX9kcwibWeWiAJWFJmEyNeBzCfHfcDoh6S
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMX9kcwibWeWiAJWFJmEyNeBzCfHfcDoh6S
+A13745 TMFLQAKEoYNM6Rt2mr3KVrsr3S16c9TjqtQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFLQAKEoYNM6Rt2mr3KVrsr3S16c9TjqtQ
+A13761 TMZia64mSRBvPZoKaVVyYkySUcA2huWTNSw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZia64mSRBvPZoKaVVyYkySUcA2huWTNSw
+A13750 TMQFKxefAqBNmWoRktrAdn4rmRhmDWeoeh6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQFKxefAqBNmWoRktrAdn4rmRhmDWeoeh6
+A13741 TMb26BUnUDVg6TwZb1prH5S7WRmrqMkTZfE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMb26BUnUDVg6TwZb1prH5S7WRmrqMkTZfE
+A13755 TMcF5m4YVeP7STMsoL3WyrgqAjdb9b5cu2Z
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcF5m4YVeP7STMsoL3WyrgqAjdb9b5cu2Z
+A13749 TMaGEtnoRirkZvgwbUroJZLAKUmKPtfmwzs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaGEtnoRirkZvgwbUroJZLAKUmKPtfmwzs
+A13753 TMREchEEx7v7QkfgE1zb1GB31AGkeZ6Vrc1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMREchEEx7v7QkfgE1zb1GB31AGkeZ6Vrc1
+A13754 TMYRhkKpcov6TmqZGpBxg8vr836rQCa9YLc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYRhkKpcov6TmqZGpBxg8vr836rQCa9YLc
+A13746 TMRYSyygT7zY363VxzpPrRyfq5HZdxJTZMP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRYSyygT7zY363VxzpPrRyfq5HZdxJTZMP
+A13748 TMcLnHe7QndU4PuyAydegh7JnqvUrxsmRCk
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcLnHe7QndU4PuyAydegh7JnqvUrxsmRCk
+A13769 TMTj9aQyzkrJgYFos8essg46FPt3ZDyshc4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTj9aQyzkrJgYFos8essg46FPt3ZDyshc4
+A13776 TMEyefjVG6Av172XfwTTqTAqBEWqqbBa9EH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEyefjVG6Av172XfwTTqTAqBEWqqbBa9EH
+A13767 TMXuDqxPkM91rPjz2ipV9DVx3YREVALtvnR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXuDqxPkM91rPjz2ipV9DVx3YREVALtvnR
+A13781 TMd1XFQ3s6D96J5ETU1XnirbcvCBcRuanhA
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMd1XFQ3s6D96J5ETU1XnirbcvCBcRuanhA
+A13784 TMH4Ah4xLE4bCLspXZYPjLfTMo4455nD4Sh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMH4Ah4xLE4bCLspXZYPjLfTMo4455nD4Sh
+A13786 TMcuEK4F4SJdu8Y18gvLBhBmyAGpsGMVvMJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcuEK4F4SJdu8Y18gvLBhBmyAGpsGMVvMJ
+A13793 TMZ8VLgeke8bARLD16F2Le7MQU4dgCoxccr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZ8VLgeke8bARLD16F2Le7MQU4dgCoxccr
+A13768 TMSBtA3VZdyteCMSGjXcSbLqf8XbsSm7kex
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSBtA3VZdyteCMSGjXcSbLqf8XbsSm7kex
+A13787 TMJnayyAnDVUBG64GJJJecnN8abfDtLmYwq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJnayyAnDVUBG64GJJJecnN8abfDtLmYwq
+A13785 TMS3tZ1XCK41rYaSE4megsHFDzpua88YVEf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMS3tZ1XCK41rYaSE4megsHFDzpua88YVEf
+A13797 TML3oBcRX5X2PVu1DCYVMPgzJ6q77gTPxiU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TML3oBcRX5X2PVu1DCYVMPgzJ6q77gTPxiU
+A13778 TMbax6eBZCPjuxeb4AtymhKNsXxaZA265jJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbax6eBZCPjuxeb4AtymhKNsXxaZA265jJ
+A13792 TMVb6r4N2kzbtTNCCBCb6oEFPemSDBnHC3C
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVb6r4N2kzbtTNCCBCb6oEFPemSDBnHC3C
+A13782 TMGny4cQB8HpGNZz1GHqoep6wnagGMnUjJP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGny4cQB8HpGNZz1GHqoep6wnagGMnUjJP
+A13800 TMWaPSrca2b9zX3umMoDDAMQZVRDKEqjePw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWaPSrca2b9zX3umMoDDAMQZVRDKEqjePw
+A13801 TMQNbH1wsoYyXqR7fCiLhFAhwbCqThouKvf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQNbH1wsoYyXqR7fCiLhFAhwbCqThouKvf
+A13783 TMRTewcoZbLd6saBQ4oU6wUvC5ao9Jncfn8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRTewcoZbLd6saBQ4oU6wUvC5ao9Jncfn8
+A13779 TMauCefjvL4Txqw2uo7Gdn9CwFYtJNvj4zH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMauCefjvL4Txqw2uo7Gdn9CwFYtJNvj4zH
+A13777 TMFiHAbNyrDobk615pkrcQp1FZs7Bvp57iU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFiHAbNyrDobk615pkrcQp1FZs7Bvp57iU
+A13796 TMXU5cfXp3yQ4CvZCkgrq79F3M5rhPLC4Cr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXU5cfXp3yQ4CvZCkgrq79F3M5rhPLC4Cr
+A13824 TMGpbcuxEgSvEeTNzCXciKjYgrZoo3Q9nk5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGpbcuxEgSvEeTNzCXciKjYgrZoo3Q9nk5
+A13823 TMQZRJwBwNg7uAaGXXAXEvyXWMjnD8MrX5a
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQZRJwBwNg7uAaGXXAXEvyXWMjnD8MrX5a
+A13803 TMY5iZTFAmoAnSpr726cM4r5x4BvwCAVQKP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMY5iZTFAmoAnSpr726cM4r5x4BvwCAVQKP
+A13827 TMbqPrvPvyGJmiF6zzghDpGerzQLnLR8pcb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbqPrvPvyGJmiF6zzghDpGerzQLnLR8pcb
+A13813 TMJAmjFQDcu7rqjrZba8CP5pPk7TSS2H3uB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJAmjFQDcu7rqjrZba8CP5pPk7TSS2H3uB
+A13830 TMZ5xP3jjW3i5PrxxsoTJXhVgEnrJkuLdNY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZ5xP3jjW3i5PrxxsoTJXhVgEnrJkuLdNY
+A13815 TMHPRDLmgnWopPNoYb2UEGcRSFmKqQtG863
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHPRDLmgnWopPNoYb2UEGcRSFmKqQtG863
+A13826 TMN87hF37NZGkjrqQEXxUutYJksKTH6T5Jj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMN87hF37NZGkjrqQEXxUutYJksKTH6T5Jj
+A13825 TMSVbQMnbiabKAtVZ3iXDiiSL4P3NNa6CJx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSVbQMnbiabKAtVZ3iXDiiSL4P3NNa6CJx
+A13829 TMFzcHgLJSpDD6Vgt7gVyiJACcvQ68YhuwV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFzcHgLJSpDD6Vgt7gVyiJACcvQ68YhuwV
+A13806 TMdhpBHYa6ZsoNvr6C3Z95wuPULhg7XSNhJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdhpBHYa6ZsoNvr6C3Z95wuPULhg7XSNhJ
+A13812 TMTeDA8Yxephg6wCZdMS6S2EL1hUryP6JT9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTeDA8Yxephg6wCZdMS6S2EL1hUryP6JT9
+A13822 TMXMQU1ULrvXPrSq2bBgkKeSMukBvKvZDcW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXMQU1ULrvXPrSq2bBgkKeSMukBvKvZDcW
+A138199 TMZ9Hg3Yq86SQCjJt1R6TAfHmbDzAvm67U6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZ9Hg3Yq86SQCjJt1R6TAfHmbDzAvm67U6
+A13831 TMNnSZni4iRcdZQiqoVPeWgtfG7ZVQr966v
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNnSZni4iRcdZQiqoVPeWgtfG7ZVQr966v
+A138119 TMQMcAwsLdPxrDkL4vYt2kkynBYxnHqP2wW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQMcAwsLdPxrDkL4vYt2kkynBYxnHqP2wW
+A13814 TMLxRz4T1nuKAvgd4GA85uAxPmVfeX75gKb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLxRz4T1nuKAvgd4GA85uAxPmVfeX75gKb
+A13828 TMR35fnTpSBVoCNUne5ByKKaL5mhNJmY1jK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMR35fnTpSBVoCNUne5ByKKaL5mhNJmY1jK
+A13802 TMdEp9TH9GzoS1gXkErTNL4VCZBG7UTBv3k
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdEp9TH9GzoS1gXkErTNL4VCZBG7UTBv3k
+A13807 TMVzfrCUnSdjaqo9rmi48fUDeBjb4Tcf8zf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVzfrCUnSdjaqo9rmi48fUDeBjb4Tcf8zf
+A13872 TMZLQZVwwAxrawdAyLXb6FyEDG2GfJPyzet
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZLQZVwwAxrawdAyLXb6FyEDG2GfJPyzet
+A13873 TMVAy7zFV4zkRgVkPmvtEbpPb39w5MMhqQJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVAy7zFV4zkRgVkPmvtEbpPb39w5MMhqQJ
+A138525 TMH8X7qEfkJAdJASsfHPsWbjhKamfF5YnNr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMH8X7qEfkJAdJASsfHPsWbjhKamfF5YnNr
+A13834 TMLcADbTgv3zMtb1KFTvgiWi97vZRdybmgi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLcADbTgv3zMtb1KFTvgiWi97vZRdybmgi
+A13871 TMNVHXU32dLHVU6hKspAQx8SmdfaZ9E7asr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNVHXU32dLHVU6hKspAQx8SmdfaZ9E7asr
+A13838 TMYkoasbHqYXDr5tdCKJ8P5KMNcpcBba2ys
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYkoasbHqYXDr5tdCKJ8P5KMNcpcBba2ys
+A13895 TMUbh4D2617xPV7UfEeLEQQiR7y3QcYM9dd
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUbh4D2617xPV7UfEeLEQQiR7y3QcYM9dd
+A13839 TMLB4bP9ZrWKFKtfeSLNDK3vV5sdSMF8K3y
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLB4bP9ZrWKFKtfeSLNDK3vV5sdSMF8K3y
+A13837 TMFNkHmjW5ZvZfhPECzvgjoMbw23EU1a9gJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFNkHmjW5ZvZfhPECzvgjoMbw23EU1a9gJ
+A13870 TMZm3noXjwE31vvKexavV9dRJZDoSQuMJ7S
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZm3noXjwE31vvKexavV9dRJZDoSQuMJ7S
+A138590 TMF7oibnY5JebpnqTeyHrhWJfaMSBw5PgwP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMF7oibnY5JebpnqTeyHrhWJfaMSBw5PgwP
+A13836 TMc441Ne5ijEadZk4ABmmxSzrgjVRdPknbQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMc441Ne5ijEadZk4ABmmxSzrgjVRdPknbQ
+A139745 TMJ9gSDEid8PprLqWxPXcU5nkJb4FPsosrw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJ9gSDEid8PprLqWxPXcU5nkJb4FPsosrw
+A13835 TMGrKZ5d3ms4WPwxWS9PQsMMo51gBbFo55c
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGrKZ5d3ms4WPwxWS9PQsMMo51gBbFo55c
+A13832 TMLyrXQUUeeq5v4CGU8uypGZmEzUsmXtA2j
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLyrXQUUeeq5v4CGU8uypGZmEzUsmXtA2j
+A139740 TMEgMDvgPwKovRLVQvS8Pf5QWRQxCR8wzZo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEgMDvgPwKovRLVQvS8Pf5QWRQxCR8wzZo
+A13894 TMJrNJEQr7dUe5FfhMY4jPgvKpFHH4VL8NE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJrNJEQr7dUe5FfhMY4jPgvKpFHH4VL8NE
+A13833 TMFDSCyAc2hW9dDPZiaT9wBBZfn5WNKCEAC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFDSCyAc2hW9dDPZiaT9wBBZfn5WNKCEAC
+A13897 TMUA7CupvYSfmBRNGqsxJ491AYr9K2XP98A
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUA7CupvYSfmBRNGqsxJ491AYr9K2XP98A
+A13896 TMKBwUGdB42SEu3he8uG7jcXqrkHot9rd9n
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKBwUGdB42SEu3he8uG7jcXqrkHot9rd9n
+A140230 TMYdYuyp7r17L4YqTcM8sG12hFXVz6Pud6T
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYdYuyp7r17L4YqTcM8sG12hFXVz6Pud6T
+A145721 TMLWrt5kZGbFfRLLgQzmE95RkMynLWQ8b8h
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLWrt5kZGbFfRLLgQzmE95RkMynLWQ8b8h
+A140529 TMY5KcsKbmMay6shZFYY3Y327Py3DLcLy15
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMY5KcsKbmMay6shZFYY3Y327Py3DLcLy15
+A145529 TMYrQxwBx7esn673aPdZ7KQ3oYqBb1AopKG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYrQxwBx7esn673aPdZ7KQ3oYqBb1AopKG
+A14298 TMT3PKZTTxgb5Shf4dqJp6QEN3Ng1qvZNg2
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMT3PKZTTxgb5Shf4dqJp6QEN3Ng1qvZNg2
+A14905 TMJjarXKieTzsqWoXWFSaFXpZvUoAWQgp4N
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJjarXKieTzsqWoXWFSaFXpZvUoAWQgp4N
+A145123 TMHexUvJAuKjL4MkB3yBAEAg5MqTyesHzPT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHexUvJAuKjL4MkB3yBAEAg5MqTyesHzPT
+A140062 TMGgY8rMfVCKJnsKE93Wb2wHo2AE1U2gLwX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGgY8rMfVCKJnsKE93Wb2wHo2AE1U2gLwX
+A145699 TMVLR9aaTHHsy1ax2dxyqoSqv48oxFPYf5X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVLR9aaTHHsy1ax2dxyqoSqv48oxFPYf5X
+A14479 TMQuLD6ZiXGgxzEduppthtLEjHjfodEB4s7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQuLD6ZiXGgxzEduppthtLEjHjfodEB4s7
+A144345 TMQyt7aJh2D6MgMpUqAuQKyc3bCNvEQSsM3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQyt7aJh2D6MgMpUqAuQKyc3bCNvEQSsM3
+A14904 TMHPQUBPm4C1kajjMMttXZ4JgyFs5dJuWWM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHPQUBPm4C1kajjMMttXZ4JgyFs5dJuWWM
+A14286 TMH1EVSykXHDbBtvXfW67sUepXQE4bj2Ciy
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMH1EVSykXHDbBtvXfW67sUepXQE4bj2Ciy
+A14297 TMKDUYhexWoAqHUHYzCRKy9BWZVeW9RGUeW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKDUYhexWoAqHUHYzCRKy9BWZVeW9RGUeW
+A143248 TMH6dWac9vvroieVRL9vmJWx9MN4bKCoiVJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMH6dWac9vvroieVRL9vmJWx9MN4bKCoiVJ
+A14144 TMFGSNHR8Cg9uwyAXEkpcgKyYMMGnh3cGb7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFGSNHR8Cg9uwyAXEkpcgKyYMMGnh3cGb7
+A144829 TMX6CSPn5Lus3mhv9UBFeiBUixrDecW2rg9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMX6CSPn5Lus3mhv9UBFeiBUixrDecW2rg9
+A140961 TMUBMHCBmy3cc2iN4aVipufRp5xQenFqFYS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUBMHCBmy3cc2iN4aVipufRp5xQenFqFYS
+A14145 TMKg4DTHJts8SzwKPE6RQfzfSw53DQZSDJP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKg4DTHJts8SzwKPE6RQfzfSw53DQZSDJP
+A14401 TMTjdLcM3VsxaHtvwXWR4mLsyQTGSX61Kya
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTjdLcM3VsxaHtvwXWR4mLsyQTGSX61Kya
+A14926 TMY72qZSUyEqqzJUJ1fujSMcpqCB1LD9cu7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMY72qZSUyEqqzJUJ1fujSMcpqCB1LD9cu7
+A14934 TMPhgztzT4j2bAqAZgkVQeBNezFjHc9MPaf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPhgztzT4j2bAqAZgkVQeBNezFjHc9MPaf
+A14930 TMMNr5Q3eXJhKY3gc6YitLu3MLVfAfeqAPx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMNr5Q3eXJhKY3gc6YitLu3MLVfAfeqAPx
+A14942 TMPxmFKFWLDcDEMQiGsdbWU3gxnygm86d5f
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPxmFKFWLDcDEMQiGsdbWU3gxnygm86d5f
+A14941 TMa56oCyPgkQFi1fhnSbriUpx4cmhBX9cgJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMa56oCyPgkQFi1fhnSbriUpx4cmhBX9cgJ
+A14943 TMU19TWQukd5BKt3Gyf9qqNMSpn5pDsQSQZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMU19TWQukd5BKt3Gyf9qqNMSpn5pDsQSQZ
+A14921 TMMrzSy16NWaPHNMRARyuNx7NaLkSg58fDj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMrzSy16NWaPHNMRARyuNx7NaLkSg58fDj
+A14935 TMYYqzpQUBpbWvkWw23dqiFseYWmehDSggh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYYqzpQUBpbWvkWw23dqiFseYWmehDSggh
+A14929 TMZxLqhrFbpXVmeWPaKGyxPt61AXHrJTgEP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZxLqhrFbpXVmeWPaKGyxPt61AXHrJTgEP
+A14987 TMamMV9Xnb3PmfvCiZUftynG5xA3UPveKph
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMamMV9Xnb3PmfvCiZUftynG5xA3UPveKph
+A14937 TMRCCqozuT7UMUi8rPx62uKrz3DBwY8ULXT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRCCqozuT7UMUi8rPx62uKrz3DBwY8ULXT
+A14940 TMEg81v4hqAkW6NAxEUEdt24bWLLfgeHvpK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEg81v4hqAkW6NAxEUEdt24bWLLfgeHvpK
+A14928 TMX4eFZLuXydoyGXXVEFAoLa7rjEGnnxg4g
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMX4eFZLuXydoyGXXVEFAoLa7rjEGnnxg4g
+A14990 TMFgtXqjL3iiH6ZqYPpGsfya8BwECX133e9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFgtXqjL3iiH6ZqYPpGsfya8BwECX133e9
+A14927 TMcRbiFHzx2Wi5iQdfmDNHtVGGnZhctabdu
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcRbiFHzx2Wi5iQdfmDNHtVGGnZhctabdu
+A14931 TMF62VcyKWvQvdv3w5b9E1J2C93VWf1yESY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMF62VcyKWvQvdv3w5b9E1J2C93VWf1yESY
+A14925 TMcgyNKGaVPKQyupoqS9yJrmxVDL3SJMdC2
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcgyNKGaVPKQyupoqS9yJrmxVDL3SJMdC2
+A14986 TMQYoaUKzqEmTp7PqnFCjf5giC4EXnwoh37
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQYoaUKzqEmTp7PqnFCjf5giC4EXnwoh37
+A14938 TMTbraRVQQwGyP5jUieXceuKq8BExJiVRz2
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTbraRVQQwGyP5jUieXceuKq8BExJiVRz2
+A14936 TMFubjvGa9jTsAHpzxbxQR24QUVdnkGu5Sr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFubjvGa9jTsAHpzxbxQR24QUVdnkGu5Sr
+A14993 TMWPooqkzMCTnqVV4h6P7CkxRfQ9UQb8YDY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWPooqkzMCTnqVV4h6P7CkxRfQ9UQb8YDY
+A155657 TMUN9pJwFvvyeXR5Vvg9zkS4hBoxHvwhRL9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUN9pJwFvvyeXR5Vvg9zkS4hBoxHvwhRL9
+A15262 TMPAftH9po5rrBuv1stx9GP38i1F3F2RZ4U
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPAftH9po5rrBuv1stx9GP38i1F3F2RZ4U
+A15261 TMSdJ5xZa59hcPk1EkhpmFKKaAvk6tidSoT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSdJ5xZa59hcPk1EkhpmFKKaAvk6tidSoT
+A15457 TMWj1fq4tE2XDzndnhmYPrhkrL9Lwa99w59
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWj1fq4tE2XDzndnhmYPrhkrL9Lwa99w59
+A1553 TMYgZknuCjoEDdu3WymUTgtUbA6zfaVQVmi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYgZknuCjoEDdu3WymUTgtUbA6zfaVQVmi
+A14992 TMX2QAXzjts2xKUJqQR55r6a4UBqbjaiNgn
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMX2QAXzjts2xKUJqQR55r6a4UBqbjaiNgn
+A15013 TMQYMy6Cd7KhsiDf4WWtW6t272YmZbJXg1w
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQYMy6Cd7KhsiDf4WWtW6t272YmZbJXg1w
+A15259 TMU1nvAQ512pCAWAm6HFtLB4p4EV4r4jnPX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMU1nvAQ512pCAWAm6HFtLB4p4EV4r4jnPX
+A155594 TMdCcv9DPL43bbMKZXr96UoroqH7YtUQVV7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdCcv9DPL43bbMKZXr96UoroqH7YtUQVV7
+A155477 TMLLPqAXmPjiiveZeDNypepYBufRnMEPAkP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLLPqAXmPjiiveZeDNypepYBufRnMEPAkP
+A14991 TMSD7vobJdATnrHAwPkUihoT1qx3F2jEyj9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSD7vobJdATnrHAwPkUihoT1qx3F2jEyj9
+A155644 TMMgxSthCnUy6CmgfTU5ZTJjMXc7y2hxkbK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMgxSthCnUy6CmgfTU5ZTJjMXc7y2hxkbK
+A154575 TMTjVQCNoXSTbGHVGMMPs4UB5pUf4SWHBBp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTjVQCNoXSTbGHVGMMPs4UB5pUf4SWHBBp
+A155634 TMXsKxfFakKviELFevMhCCrWo81HRehFiJa
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXsKxfFakKviELFevMhCCrWo81HRehFiJa
+A155631 TMNnyE7GvZGoo1wLwfM7GXA2gHN9ejjZfqq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNnyE7GvZGoo1wLwfM7GXA2gHN9ejjZfqq
+A15000 TMVaZnTGBnijcV5nLUmBXMF8vKXj9g9XLuQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVaZnTGBnijcV5nLUmBXMF8vKXj9g9XLuQ
+A14994 TMRocmaqAkLJysuPSeotxmD776jeu8z6kAp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRocmaqAkLJysuPSeotxmD776jeu8z6kAp
+A155621 TMQYJ3hBP8acWSnuFw555v3HJWPGYHg1usz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQYJ3hBP8acWSnuFw555v3HJWPGYHg1usz
+A1545 TMUoACcoEN4ZHvUq8XRr5FPYkKZkFRopfUQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUoACcoEN4ZHvUq8XRr5FPYkKZkFRopfUQ
+A160958 TML9SC1TuR26r3ALieuoHbD6PTWBrXNBH8d
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TML9SC1TuR26r3ALieuoHbD6PTWBrXNBH8d
+A1582 TMMqUp7qenWcZ5XZhiFpdzAVifkeCdbSbaq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMqUp7qenWcZ5XZhiFpdzAVifkeCdbSbaq
+A1596 TMNpMvF2hKqxjEcGd1ZFfp2dzcRAzXaXzzH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNpMvF2hKqxjEcGd1ZFfp2dzcRAzXaXzzH
+A16065 TMSF3DNVDdvCRvsnf3G911RKnqbe1mrvWb1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSF3DNVDdvCRvsnf3G911RKnqbe1mrvWb1
+A16101 TMVNcmQYNaDiGHpMZMrCHJo99Y28trY7Qi6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVNcmQYNaDiGHpMZMrCHJo99Y28trY7Qi6
+A155667 TMZfnjQqkbw1nR5gmxSFGBkmaZ9e1LPoLco
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZfnjQqkbw1nR5gmxSFGBkmaZ9e1LPoLco
+A156084 TMVFpKrcgJ5pYCMPBEJphbyRqkxFHHzfQ2U
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVFpKrcgJ5pYCMPBEJphbyRqkxFHHzfQ2U
+A1594 TMVoS3jU2PAo1CdbiYZiAHFNahJivPWqHSS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVoS3jU2PAo1CdbiYZiAHFNahJivPWqHSS
+A158609 TMK5C2q2Hs1BvyoAyhLa1LUN27LWqw6GDQP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMK5C2q2Hs1BvyoAyhLa1LUN27LWqw6GDQP
+A155670 TMPoaw2PJReNLus6qbEw3TsPFMKVY84YjGm
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPoaw2PJReNLus6qbEw3TsPFMKVY84YjGm
+A159721 TMNSJLSFUMrt2Z7SbVCiMU7WEZ8EJgTc1VS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNSJLSFUMrt2Z7SbVCiMU7WEZ8EJgTc1VS
+A1579 TMKes4ckUvS7RsTpaep28dG9BbFFwf3TkN7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKes4ckUvS7RsTpaep28dG9BbFFwf3TkN7
+A1589 TMUWhsdh67C2duzh6EYb87FjVdpcm5VGfBy
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUWhsdh67C2duzh6EYb87FjVdpcm5VGfBy
+A160912 TMFoYijQTMGFjXyFhj9xc5goh6ZXLaEcXiq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFoYijQTMGFjXyFhj9xc5goh6ZXLaEcXiq
+A159669 TMcjgqiuREyii8RzYLrPW4jG5waVJjhwM9E
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcjgqiuREyii8RzYLrPW4jG5waVJjhwM9E
+A158749 TMV65k4LTP7c4sEUN3oSayeXSA94fTRCiiX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMV65k4LTP7c4sEUN3oSayeXSA94fTRCiiX
+A16092 TMJgMPKj6bzgy1hTvMWacV9zN86AQ1dF2zJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJgMPKj6bzgy1hTvMWacV9zN86AQ1dF2zJ
+A159941 TMWr4HQm85zMVc6yYWGwZ46dNXknv5q5JpQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWr4HQm85zMVc6yYWGwZ46dNXknv5q5JpQ
+A158455 TMdXBuaGgBvynsEjFDYgSSfQi8SRNcsAPRV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdXBuaGgBvynsEjFDYgSSfQi8SRNcsAPRV
+A155663 TMQ2aoxVfEXxSJYvYXMt4TauWzBqN2DWg5G
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQ2aoxVfEXxSJYvYXMt4TauWzBqN2DWg5G
+A16169 TMFwN9J4LEUb7zNNP1EN43vUMYavDpTeyKh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFwN9J4LEUb7zNNP1EN43vUMYavDpTeyKh
+A16172 TMRFWRBTpi9njy1HMcvf9Q6mXDKczsGShDh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRFWRBTpi9njy1HMcvf9Q6mXDKczsGShDh
+A16123 TMLQgQTAHKbpGXGnrWPiyJHGsjiKNe4ZFvP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLQgQTAHKbpGXGnrWPiyJHGsjiKNe4ZFvP
+A161495 TMKc8NENP7RcBoF3kuj2MGh8n7QqQmEF8YU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKc8NENP7RcBoF3kuj2MGh8n7QqQmEF8YU
+A16164 TMW3oYEU9EpD2iMpPVAWSEkComSZEaKQVGa
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMW3oYEU9EpD2iMpPVAWSEkComSZEaKQVGa
+A16177 TMN35B89qvRPgQq8VvmrHMmfb8Jo13BV5bs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMN35B89qvRPgQq8VvmrHMmfb8Jo13BV5bs
+A16170 TMb8m3nkS5yDTKALBtsxRX3GdmLdww39ZNC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMb8m3nkS5yDTKALBtsxRX3GdmLdww39ZNC
+A16149 TMUEYXwtY2yGyGBbVrrrV1CjrzgxT4tFW5N
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUEYXwtY2yGyGBbVrrrV1CjrzgxT4tFW5N
+A16188 TMHADuMgHrGtjqpmvrNmgPENUW6DFRrcRwE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHADuMgHrGtjqpmvrNmgPENUW6DFRrcRwE
+A16174 TMKq61WgJ79v9J1BRCxbvkt5NMhtgxinFDJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKq61WgJ79v9J1BRCxbvkt5NMhtgxinFDJ
+A16175 TMMLXyhnZMU1rLqZpST4WcaV7HqkCaoJehW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMLXyhnZMU1rLqZpST4WcaV7HqkCaoJehW
+A16136 TMTb1vtq4n7W8yusfdKTG2jLaokMFcyVgby
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTb1vtq4n7W8yusfdKTG2jLaokMFcyVgby
+A16125 TMMCZUKrU7xbYgm4gRTYjD72aXtXJFKofZ4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMCZUKrU7xbYgm4gRTYjD72aXtXJFKofZ4
+A16133 TMcQQG4AthDs6iBtmDQSHBH1RCpHB38edD1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcQQG4AthDs6iBtmDQSHBH1RCpHB38edD1
+A161124 TMZacJoqC3Pbzy6pN4hUTQuMLmHBAsn4CEU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZacJoqC3Pbzy6pN4hUTQuMLmHBAsn4CEU
+A16137 TMGrZrDNbR6Pc1H4S5e7kuTMPZYpy3Ffyg4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGrZrDNbR6Pc1H4S5e7kuTMPZYpy3Ffyg4
+A16195 TMWV14GDXQAY78AuUFRxVQVRFBqHom9b52Z
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWV14GDXQAY78AuUFRxVQVRFBqHom9b52Z
+A161729 TMYqUXyMs6jjS4iFnU4VSow7nKjzHUza2px
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYqUXyMs6jjS4iFnU4VSow7nKjzHUza2px
+A16191 TMa8dxMTvNZGMafR72WXMtADheyBBpzqUHi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMa8dxMTvNZGMafR72WXMtADheyBBpzqUHi
+A161120 TMUEeJsVj9Ke8R4v3XKHgRmkBCsnCjwHpdW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUEeJsVj9Ke8R4v3XKHgRmkBCsnCjwHpdW
+A162523 TMbvdoacAmuYuWSAHjfkvFiTwBEprsvLP2P
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbvdoacAmuYuWSAHjfkvFiTwBEprsvLP2P
+A16197 TMPPc8F5m4k47K9G4rccjgZMSacReoFmU1P
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPPc8F5m4k47K9G4rccjgZMSacReoFmU1P
+A16227 TMGNNihZu24Hc4QmqsZVd7xtExk6zYFBrsr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGNNihZu24Hc4QmqsZVd7xtExk6zYFBrsr
+A16292 TMKxL3RDAajYeVLX8d8bhzkSNQrK2Zg3j5A
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKxL3RDAajYeVLX8d8bhzkSNQrK2Zg3j5A
+A16260 TMMD1xKz45mrTLtamQLpU14hwEainxJ1QiK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMD1xKz45mrTLtamQLpU14hwEainxJ1QiK
+A16281 TMUZNFZNiMDAeLpxKLGLjpDyUzThHwUi3fK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUZNFZNiMDAeLpxKLGLjpDyUzThHwUi3fK
+A16226 TMRQZCRBBpRC3JFuxhLqtCKeFz5NyvUZmMh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRQZCRBBpRC3JFuxhLqtCKeFz5NyvUZmMh
+A16256 TMWYQG2LTGMeoqyrGqku79DhnQbgoSYsd6U
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWYQG2LTGMeoqyrGqku79DhnQbgoSYsd6U
+A16299 TMX3hKRvpsPZQ6ohdzxvdUJ2ZJgqB2QT4Sv
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMX3hKRvpsPZQ6ohdzxvdUJ2ZJgqB2QT4Sv
+A16263 TMXsc36Q4mp6cPWPdfec5h8ex8eVNEEBFHy
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXsc36Q4mp6cPWPdfec5h8ex8eVNEEBFHy
+A16305 TMTfrgNmdw5B76Mu8jPpwtCp1dMiBkHaojo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTfrgNmdw5B76Mu8jPpwtCp1dMiBkHaojo
+A162670 TMbeA4y5av8sUbQUskQDtHX4jMSiGi6FTTG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbeA4y5av8sUbQUskQDtHX4jMSiGi6FTTG
+A16262 TMbLWTwWSjsmXXPJabVHym6AhdgNktKz5FE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbLWTwWSjsmXXPJabVHym6AhdgNktKz5FE
+A16302 TMSppQyUbjx69pS5bZ2rczcCtYLqqhcAcLu
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSppQyUbjx69pS5bZ2rczcCtYLqqhcAcLu
+A162666 TMQZkHY7g5c98GRkPHfCEv3VWbGNsdvKSwF
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQZkHY7g5c98GRkPHfCEv3VWbGNsdvKSwF
+A16267 TMcvFKogY86CtkTfgJhANdYPYg8vtxRLSPV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcvFKogY86CtkTfgJhANdYPYg8vtxRLSPV
+A16293 TMdLLXWCHze6PC2XEJvbvsse5THKbthRU64
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdLLXWCHze6PC2XEJvbvsse5THKbthRU64
+A16268 TMK6Z3R2ugGUwYjRpFtoqvLhLrjm3HZpqiH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMK6Z3R2ugGUwYjRpFtoqvLhLrjm3HZpqiH
+A16237 TMbW648BsbNmTM74rbZ8im7dgQm2VPyNEuU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbW648BsbNmTM74rbZ8im7dgQm2VPyNEuU
+A16294 TMaeir9eDLiPMA6QFknMjciv8WLURLtL5oc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaeir9eDLiPMA6QFknMjciv8WLURLtL5oc
+A165748 TMdNZuZfF4ndvKSYzRAV44oLGVSjv5cbvTL
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdNZuZfF4ndvKSYzRAV44oLGVSjv5cbvTL
+A16315 TMJKYrTr3tNpdoLxrFC3k8zn6dkkLx5Uogf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJKYrTr3tNpdoLxrFC3k8zn6dkkLx5Uogf
+A16322 TMLvjW4fcwebzkaQBN2ubDcwT5UKnxJeuRz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLvjW4fcwebzkaQBN2ubDcwT5UKnxJeuRz
+A164786 TMXGGGgYtsUTaVKedexFUoTAuTcyLgiyg9a
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXGGGgYtsUTaVKedexFUoTAuTcyLgiyg9a
+A16312 TMZDipnwEvxmkpY1xEcsmFVE7VskgcoyNh3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZDipnwEvxmkpY1xEcsmFVE7VskgcoyNh3
+A16317 TMKPAK1XTKqJ9wAyY1Qf8zXEqRZddNEY6HP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKPAK1XTKqJ9wAyY1Qf8zXEqRZddNEY6HP
+A16981 TMLqb49vYEqGRS6bZCUpfXPYhsBPEawKi9j
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLqb49vYEqGRS6bZCUpfXPYhsBPEawKi9j
+A163309 TMJ5djcF2vVcR98x3yQcXao7gjFBYxaiCgm
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJ5djcF2vVcR98x3yQcXao7gjFBYxaiCgm
+A16309 TMYdRpYRDWFM2v5JedDcsmYWhsxHemQ5KAP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYdRpYRDWFM2v5JedDcsmYWhsxHemQ5KAP
+A16324 TMKpZwk8nmhbz9W53mK3VCC3otGVxQk1DGE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKpZwk8nmhbz9W53mK3VCC3otGVxQk1DGE
+A166725 TMdFcKS7gkqY42GQtwaJEMTfA5XSvZ9zcCd
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdFcKS7gkqY42GQtwaJEMTfA5XSvZ9zcCd
+A167477 TMHqRoAyg1Ur4SJk1doG6b5uHr2GK3tC4Wk
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHqRoAyg1Ur4SJk1doG6b5uHr2GK3tC4Wk
+A167478 TMVnbRe8CDwPRuFbcKczoGRWaUPSjY9Xaqb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVnbRe8CDwPRuFbcKczoGRWaUPSjY9Xaqb
+A166025 TMJYc4R86QdFTDMCzzejqrQ23Nt8cYKsyXs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJYc4R86QdFTDMCzzejqrQ23Nt8cYKsyXs
+A163826 TMTazd7P9ohHdtkMX5kJyPbbtF9wyvrBpGo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTazd7P9ohHdtkMX5kJyPbbtF9wyvrBpGo
+A16633 TMMwJ7Pi35rEdjQkYGP1NiJRJ87CAdqA9Jx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMwJ7Pi35rEdjQkYGP1NiJRJ87CAdqA9Jx
+A16320 TMYojTPzceNqrkFQUmF13YkBgbsBW6XNqZe
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYojTPzceNqrkFQUmF13YkBgbsBW6XNqZe
+A16765 TMLuNJz3HoETAh9XH5FcRDV6AfUbkDwQS2s
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLuNJz3HoETAh9XH5FcRDV6AfUbkDwQS2s
+A169726 TMMP9q9Rhh7xbem5d8wVJ4M7N5TG9BBgsty
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMP9q9Rhh7xbem5d8wVJ4M7N5TG9BBgsty
+A166516 TMbu8W62ARF1x4sd5w8Hrv5NSAc7PzEXpTz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbu8W62ARF1x4sd5w8Hrv5NSAc7PzEXpTz
+A171220 TMZUhrRgULUXJLgAnUbCGCnnKzeynmsiRSj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZUhrRgULUXJLgAnUbCGCnnKzeynmsiRSj
+A1716 TMPKA9gaj861Yjd869NQG3S5VxfptfsP4tM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPKA9gaj861Yjd869NQG3S5VxfptfsP4tM
+A1730 TMYVciRvEJ8dNiNmKL1dEmRQezbUSiBrCr1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYVciRvEJ8dNiNmKL1dEmRQezbUSiBrCr1
+A173952 TMMmRatfS4ugDQH9EjBAvtQnvB3cgPfaRE6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMmRatfS4ugDQH9EjBAvtQnvB3cgPfaRE6
+A177097 TMaKZ2wefwYDTJNdgCnwdkisu3EgYaLfGY3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaKZ2wefwYDTJNdgCnwdkisu3EgYaLfGY3
+A177112 TMVLeHpMYWeB91WTwxSC4obGWkLd9PA6J2f
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVLeHpMYWeB91WTwxSC4obGWkLd9PA6J2f
+A174778 TMT7GykyppwKmrmvnN6svchWKbWTA4JLBiQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMT7GykyppwKmrmvnN6svchWKbWTA4JLBiQ
+A174515 TMa2ptp9jKWjasAhaTpTgNazJUr5saQUhcz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMa2ptp9jKWjasAhaTpTgNazJUr5saQUhcz
+A175151 TMQwReCpmFQBKxJShNb6W1YQW5tZTFZfHnh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQwReCpmFQBKxJShNb6W1YQW5tZTFZfHnh
+A177098 TMdHx67APC5YMVnVXBVaauyV5A2vJqTGPUS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdHx67APC5YMVnVXBVaauyV5A2vJqTGPUS
+A177071 TMP79bi9dM5jEgw8YfzdYoNfcq7J26gPajz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMP79bi9dM5jEgw8YfzdYoNfcq7J26gPajz
+A1705 TMauHD4SJ2doLP7bgQJ6REn5bXP5bCi1XgS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMauHD4SJ2doLP7bgQJ6REn5bXP5bCi1XgS
+A172175 TMZfQBnWc3twuQztVSPpBYZBftVNFAYKzzb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZfQBnWc3twuQztVSPpBYZBftVNFAYKzzb
+A173770 TMRFEs3kFbxufPfvNxLMQnecoVM8q9PZA4N
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRFEs3kFbxufPfvNxLMQnecoVM8q9PZA4N
+A17065 TMQe3PdLEo3DGTUrEPbr2MQBcYpReMDHfkW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQe3PdLEo3DGTUrEPbr2MQBcYpReMDHfkW
+A178185 TMGmnV5DNyE65e5RR69HJQVJfonetexBXw4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGmnV5DNyE65e5RR69HJQVJfonetexBXw4
+A177074 TMYdBgEgR4je4HegSaNSCLPNn3q5HENHWCh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYdBgEgR4je4HegSaNSCLPNn3q5HENHWCh
+A171499 TMJ7K5isa4i2MdRZSDMM2xVsRZLY4j37Lc5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJ7K5isa4i2MdRZSDMM2xVsRZLY4j37Lc5
+A171415 TMFvSTt9TA4HMkdyYSVUWjbpdQ3MHZzK1dE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFvSTt9TA4HMkdyYSVUWjbpdQ3MHZzK1dE
+A170742 TMKDtg6ughscJKb3J4YMeceoSbYSoFdcLMS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKDtg6ughscJKb3J4YMeceoSbYSoFdcLMS
+A1870 TMbsEBeLt1etfv2LoQAeuvPnUKjkR2UeeQY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbsEBeLt1etfv2LoQAeuvPnUKjkR2UeeQY
+A184368 TMKT3UZzqZwpCBV3L6WEFV1BvJ7Np5orCCx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKT3UZzqZwpCBV3L6WEFV1BvJ7Np5orCCx
+A186947 TMHCUtVai261vGTLb5CkHVnmE9idtYnmat3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHCUtVai261vGTLb5CkHVnmE9idtYnmat3
+A180844 TMNnzqxwV6dbSUHPe23pL7oFqTbBRmiEEZ5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNnzqxwV6dbSUHPe23pL7oFqTbBRmiEEZ5
+A188161 TMaZpNL4mWhaeepTqQrbUqj1efgGdxbZABG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaZpNL4mWhaeepTqQrbUqj1efgGdxbZABG
+A17932 TMKq76H7jsTopHvBD8rkDomKGgRPa5UQX82
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKq76H7jsTopHvBD8rkDomKGgRPa5UQX82
+A188914 TMF14CXm59pqKvtbebbnufrCzSHE7b75R1X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMF14CXm59pqKvtbebbnufrCzSHE7b75R1X
+A1813 TMQ34DwkUP3JRircJNw4CpSDCgCneUYoE5C
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQ34DwkUP3JRircJNw4CpSDCgCneUYoE5C
+A17931 TMZN36gHcX15uo3WWdbWuLoUgxyd665Tboc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZN36gHcX15uo3WWdbWuLoUgxyd665Tboc
+A17916 TMMfaJ8PWYnUexbjtWPKxMobT5iQgHjtA98
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMfaJ8PWYnUexbjtWPKxMobT5iQgHjtA98
+A178248 TMV9DTsVFKJtUMVBmi7ErEzX4moBZ5PPwL4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMV9DTsVFKJtUMVBmi7ErEzX4moBZ5PPwL4
+A18215 TMWJo2sLn5VWNRSPWjNx3WrtyRvbjRBKPCB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWJo2sLn5VWNRSPWjNx3WrtyRvbjRBKPCB
+A17953 TMSbZVAFVbZcX5SsmwYejyB6e9PggykippP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSbZVAFVbZcX5SsmwYejyB6e9PggykippP
+A1814 TMcM5waNFfFcLANRndUX2i8F8oJioknBKdv
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcM5waNFfFcLANRndUX2i8F8oJioknBKdv
+A1879 TMPP82D79NREWh8HwK1i15WHLuwqKgvwGy1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPP82D79NREWh8HwK1i15WHLuwqKgvwGy1
+A187560 TMRtbTc35cxosjtX6p5fz2CdKXXaWc7YrDD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRtbTc35cxosjtX6p5fz2CdKXXaWc7YrDD
+A179135 TMM1yfqEjVwAEW8axZQfHYDKrUphs2HFv3C
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMM1yfqEjVwAEW8axZQfHYDKrUphs2HFv3C
+A182543 TMEyVfSwd8NNBKJFz36o1kbKhtroFdt39HD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEyVfSwd8NNBKJFz36o1kbKhtroFdt39HD
+A18092 TMLUgX4ticrovCq5bCg5jT5rdmF27K7uCyj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLUgX4ticrovCq5bCg5jT5rdmF27K7uCyj
+A17952 TMJnL1F8ws48bPCv2GQycBCSJSbHtQ5BWbb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJnL1F8ws48bPCv2GQycBCSJSbHtQ5BWbb
+A195590 TMa7ynZJns9BKxQUehx7i8Rp62uwj4MFvn5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMa7ynZJns9BKxQUehx7i8Rp62uwj4MFvn5
+A189356 TMVSttYZEJSADxrCNvm15yKnDsBwJCy7Wq8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVSttYZEJSADxrCNvm15yKnDsBwJCy7Wq8
+A19443 TMGYgSqDrueTN6M37AwsbaXncMrS5NZrghr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGYgSqDrueTN6M37AwsbaXncMrS5NZrghr
+A19483 TMaioAZWYh4ng9ScfZw9YcxYr7PGyJMAjg9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaioAZWYh4ng9ScfZw9YcxYr7PGyJMAjg9
+A1923 TMSWRcd9q2PgHeFnNmoTT9zSNuNiaJpKqMw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSWRcd9q2PgHeFnNmoTT9zSNuNiaJpKqMw
+A192475 TMVHp14vrAuW2KrHaCFDFJW7ivP7gBj1ZP7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVHp14vrAuW2KrHaCFDFJW7ivP7gBj1ZP7
+A190540 TMK7vjQxRNtMuVScEeB7Y52HB3maA1jXTge
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMK7vjQxRNtMuVScEeB7Y52HB3maA1jXTge
+A18912 TMMFi5jgJqExQ4nuEYsWttSQSE36XtRM7CC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMFi5jgJqExQ4nuEYsWttSQSE36XtRM7CC
+A195615 TMPxzHggMXZ1axpWQsDeFkzCEHau3zBDsz3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPxzHggMXZ1axpWQsDeFkzCEHau3zBDsz3
+A190542 TMZrNgiEKAwCcC6LK8W8qeepKTRPSXgCv5v
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZrNgiEKAwCcC6LK8W8qeepKTRPSXgCv5v
+A193577 TMTfKb42dTwuPcPVj5VUPs23QrgB2rpSvRZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTfKb42dTwuPcPVj5VUPs23QrgB2rpSvRZ
+A189318 TMUAVovfH3G4RXC5WcHXDL3913KJu3Hc5Ut
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUAVovfH3G4RXC5WcHXDL3913KJu3Hc5Ut
+A190966 TMSZ9q8tXjur37ZTztgz3giQpvrhEjv978g
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSZ9q8tXjur37ZTztgz3giQpvrhEjv978g
+A192796 TMLamgpmmLktCkXfzUSgfnZApbScHKB1v9y
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLamgpmmLktCkXfzUSgfnZApbScHKB1v9y
+A193592 TMHrKo9zkHZqxJ6EVudtAtiwEuLRrzpya2b
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHrKo9zkHZqxJ6EVudtAtiwEuLRrzpya2b
+A19040 TMRLMMjdWr8VNF1RG8zBZrRkQ8QH4hKmc8v
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRLMMjdWr8VNF1RG8zBZrRkQ8QH4hKmc8v
+A190576 TMLcvTypDToLSTmwFghVqeX8D5uMKSfMhw9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLcvTypDToLSTmwFghVqeX8D5uMKSfMhw9
+A19613 TMVVcxdaPpNb9o3uPhKXBKEEQB5PiQ77WQs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVVcxdaPpNb9o3uPhKXBKEEQB5PiQ77WQs
+A19490 TMR5MBFpBqeFHHSKWjJfbacNmgkDhfRCFQs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMR5MBFpBqeFHHSKWjJfbacNmgkDhfRCFQs
+A190535 TMQo3bDcsnwh5iU9Ng3zE65ia5SNHCVpuqj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQo3bDcsnwh5iU9Ng3zE65ia5SNHCVpuqj
+A198797 TMTCRkmvHFmSaQHeFomhHY5vNDZ63qFkkS7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTCRkmvHFmSaQHeFomhHY5vNDZ63qFkkS7
+A198692 TMNCVcyijR1mzZUXghreoiu8r7U21Js71Kk
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNCVcyijR1mzZUXghreoiu8r7U21Js71Kk
+A19687 TMaq4TSDy7v3p82NCytCFsLAEoQdpG5Wmr1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaq4TSDy7v3p82NCytCFsLAEoQdpG5Wmr1
+A198854 TMHY228nRPLhM1hanX73T3qGWMJVKgk3zPG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHY228nRPLhM1hanX73T3qGWMJVKgk3zPG
+A19682 TMKU8N9XEzeYstPh1ou7oVYMCtG2up8ViDH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKU8N9XEzeYstPh1ou7oVYMCtG2up8ViDH
+A196666 TMR5Y16qwaeEioyRLUa2wvDmQx5wZkKhYzi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMR5Y16qwaeEioyRLUa2wvDmQx5wZkKhYzi
+A198857 TMXaZXzXq32bU1y4aTFgRu2uQJdSSjHS6ZW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXaZXzXq32bU1y4aTFgRu2uQJdSSjHS6ZW
+A196532 TMcc6x9nQPUS7XzEK7aJkNpujE37a81moDt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcc6x9nQPUS7XzEK7aJkNpujE37a81moDt
+A19793 TMYsVw5jd8b3oVUc6LsFD3RGRwHxk3Brksp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYsVw5jd8b3oVUc6LsFD3RGRwHxk3Brksp
+A19664 TMLvy44y73XMwpxxMSEKQFdNYNmVKPR5EBj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLvy44y73XMwpxxMSEKQFdNYNmVKPR5EBj
+A19623 TMHxyw1T3hJFbCrBeWyHLBws3CNf3PFPSVJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHxyw1T3hJFbCrBeWyHLBws3CNf3PFPSVJ
+A19854 TMRQgSqN7euWcuuVzhp4bvwLvVB9eqv9k8S
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRQgSqN7euWcuuVzhp4bvwLvVB9eqv9k8S
+A19839 TMT5CaziqAsJ49MMJTdn7EfMFqM7L9bkZAE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMT5CaziqAsJ49MMJTdn7EfMFqM7L9bkZAE
+A197130 TMUyXAaPTPqeorGjqLuQwMHRuddbLfbNnYj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUyXAaPTPqeorGjqLuQwMHRuddbLfbNnYj
+A198960 TMNt1nwNeH6LNLHHuC7jLRcPPK4tRB4XEBA
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNt1nwNeH6LNLHHuC7jLRcPPK4tRB4XEBA
+A198855 TMLtsk3KdH5CgWnXpLcULm3jhubZ2hN6Q9P
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLtsk3KdH5CgWnXpLcULm3jhubZ2hN6Q9P
+A198845 TMVsxFwWyvnnq4UbupCfof3GhUDtL7NehYg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVsxFwWyvnnq4UbupCfof3GhUDtL7NehYg
+A19869 TMFpmuLsF67zE1Nm8etAtmi3hwTyymzv6aj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFpmuLsF67zE1Nm8etAtmi3hwTyymzv6aj
+A196558 TMNuADscUJi2agPW9ihW2nWZzPXsfDRNAsm
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNuADscUJi2agPW9ihW2nWZzPXsfDRNAsm
+A198647 TMW62ryjMyR5TGzRWrL4WmoxebQzR3FW8Hu
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMW62ryjMyR5TGzRWrL4WmoxebQzR3FW8Hu
+A199300 TMHh8oWcDoVbWsFityicAQUfWkJ3Ru2F1qG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHh8oWcDoVbWsFityicAQUfWkJ3Ru2F1qG
+A199494 TMSEVg8N2gQa1mKptSyynhHSdFQVvBDmY9m
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSEVg8N2gQa1mKptSyynhHSdFQVvBDmY9m
+A199750 TMcvaUNRCZVPToTBo5Nd1jS9RTggKLw3c1e
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcvaUNRCZVPToTBo5Nd1jS9RTggKLw3c1e
+A199024 TMMkAkbAR7TMkkEH7KE4FMsUnzBt2YNThJG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMkAkbAR7TMkkEH7KE4FMsUnzBt2YNThJG
+A198966 TMSFCMV9uYT5UoQ9hwUAanev7x51n63WdqM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSFCMV9uYT5UoQ9hwUAanev7x51n63WdqM
+A199020 TMVNm5XKCM2HHUuLqSPf27eNqMhxRv6HbJg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVNm5XKCM2HHUuLqSPf27eNqMhxRv6HbJg
+A199416 TMJ1ydkQq46Te2M4BVwVTXKMDjPtCAUq4sX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJ1ydkQq46Te2M4BVwVTXKMDjPtCAUq4sX
+A199027 TMZ3DWEuvabQXiaZsD5dbGZwtvBiPhCFCdu
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZ3DWEuvabQXiaZsD5dbGZwtvBiPhCFCdu
+A199107 TMcJsGj7NHM7eAexHcN14NGNKkBSfsVXaLY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcJsGj7NHM7eAexHcN14NGNKkBSfsVXaLY
+A199115 TMLCyTwHQVnoUw7nuEC1jipHMBqMyr2xY28
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLCyTwHQVnoUw7nuEC1jipHMBqMyr2xY28
+A199552 TMVdcU4u7kEQk4xLEkYwt64rDC6HF8AkEfX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVdcU4u7kEQk4xLEkYwt64rDC6HF8AkEfX
+A199413 TMdAXXGU2ykBeGdDeeAa3eJrXradsVFs29H
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdAXXGU2ykBeGdDeeAa3eJrXradsVFs29H
+A199320 TMc57xrEn5WaWJfxB9bRPq5bdrwCkLDv6bR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMc57xrEn5WaWJfxB9bRPq5bdrwCkLDv6bR
+A198965 TMTURBg9m27kjkouSQf6uj4H4B9iFoe9PYr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTURBg9m27kjkouSQf6uj4H4B9iFoe9PYr
+A199022 TMFR3LVzaAg9Tv1cctf81wy6qhfdh6b4and
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFR3LVzaAg9Tv1cctf81wy6qhfdh6b4and
+A199559 TMGasLFq17Hw5sYw6Ff2nJT48juqkbY2r1s
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGasLFq17Hw5sYw6Ff2nJT48juqkbY2r1s
+A199686 TMW6fGmtTwYCnPfzMWuMLVdKkXux9KT7sH4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMW6fGmtTwYCnPfzMWuMLVdKkXux9KT7sH4
+A199682 TMYLWXbTjd3WTrBP4RT35TQewiF6NQgVmPz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYLWXbTjd3WTrBP4RT35TQewiF6NQgVmPz
+A19958 TMPgnoMDsYQrRixvfMYb551ECqCZXNVzZGa
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPgnoMDsYQrRixvfMYb551ECqCZXNVzZGa
+A199562 TMRMULV78L9bS1CCJTePTN8ya7MgSGejFFN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRMULV78L9bS1CCJTePTN8ya7MgSGejFFN
+A2042 TMUprizfRXVzbVYdXDNHzrXFHwrR4zim2Hy
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUprizfRXVzbVYdXDNHzrXFHwrR4zim2Hy
+A200441 TMG39eiXp2UKBVh6uk6iHWUKPFx6esw7Q7X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMG39eiXp2UKBVh6uk6iHWUKPFx6esw7Q7X
+A203170 TMS5RoUVNBkvrPVR77WXU7ssvNLo6vDNtyD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMS5RoUVNBkvrPVR77WXU7ssvNLo6vDNtyD
+A2023 TMTaNHFAovzPsKmKaHfdtRdRhq1EKq6LVw1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTaNHFAovzPsKmKaHfdtRdRhq1EKq6LVw1
+A20000 TMN1WrMWb2Yc61sgJAUfRSttCEasNss2S1X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMN1WrMWb2Yc61sgJAUfRSttCEasNss2S1X
+A203579 TMMxbAdaJVErXBqTJYpV7MX4p4KQgeuFqgS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMxbAdaJVErXBqTJYpV7MX4p4KQgeuFqgS
+A199760 TMVVrQ6RS3hawzBJyFeC4LoVoqNfqSVyGp6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVVrQ6RS3hawzBJyFeC4LoVoqNfqSVyGp6
+A20341 TMbbJ1hqhXDbz8vwUVQ4yYkwgEyunb3N5v6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbbJ1hqhXDbz8vwUVQ4yYkwgEyunb3N5v6
+A20448 TMaHiNyrpFRZoX2nj7gTFTvv9Whshrrdqnu
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaHiNyrpFRZoX2nj7gTFTvv9Whshrrdqnu
+A20346 TMZffDxh6NpV9xWJjUjVaaSBzh7YtzXtB2X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZffDxh6NpV9xWJjUjVaaSBzh7YtzXtB2X
+A20499 TMUmNW6KRAuFb2z7UtMwqnFz5ofRSo9dU6A
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUmNW6KRAuFb2z7UtMwqnFz5ofRSo9dU6A
+A199761 TMQbFHp7QFbaYR8CMYVtZ4kSqKkGNcTW4Pe
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQbFHp7QFbaYR8CMYVtZ4kSqKkGNcTW4Pe
+A199755 TMLQuzR8nmiE7yt6z3VJgtRL6d4Jz3Qguob
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLQuzR8nmiE7yt6z3VJgtRL6d4Jz3Qguob
+A20494 TMUCTHS9ZxPs64An2koJsM3xgXbgnecFJdW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUCTHS9ZxPs64An2koJsM3xgXbgnecFJdW
+A19999 TMSv9fQ8MCC9nyM2ELqY3vLg94bAHJpCVzC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSv9fQ8MCC9nyM2ELqY3vLg94bAHJpCVzC
+A20515 TMNQRtMjAbTH583eMQsB97RNrjZj5z1MdjX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNQRtMjAbTH583eMQsB97RNrjZj5z1MdjX
+A20527 TMSq6XqbiVq5wCypodRpfRtH4WDTkKZywEu
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSq6XqbiVq5wCypodRpfRtH4WDTkKZywEu
+A204245 TMXmDXiqqKtJ8pZZkBnCAs2ssVd5iBL1ejs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXmDXiqqKtJ8pZZkBnCAs2ssVd5iBL1ejs
+A20343 TMPHqMRrHYkjAnFBGaQ4xrkJjkm51tdo42f
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPHqMRrHYkjAnFBGaQ4xrkJjkm51tdo42f
+A199753 TMHKnaQMjCD4LUJz2hKdVGgRvQdouUEudXY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHKnaQMjCD4LUJz2hKdVGgRvQdouUEudXY
+A20579 TMR31NnbmtWQ9VNvwp2JDHjbts9NnqoqAwJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMR31NnbmtWQ9VNvwp2JDHjbts9NnqoqAwJ
+A20568 TMRjUuUAgLwipeLPwKUYi2TsxHLRj3EvsNu
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRjUuUAgLwipeLPwKUYi2TsxHLRj3EvsNu
+A20593 TMXTFmg4cZeKtD5dMgonNM7jzWdRKSNgZYi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXTFmg4cZeKtD5dMgonNM7jzWdRKSNgZYi
+A20606 TMFV51gU3JbT6D3eDEntTrwjArjHabuB3aM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFV51gU3JbT6D3eDEntTrwjArjHabuB3aM
+A20758 TMaYzPpkFnp8E2JR2jt8QsfpugnKmDUFKqx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaYzPpkFnp8E2JR2jt8QsfpugnKmDUFKqx
+A20566 TMQfF7tirM8yXjnyzA7NqzzFVxvJyaQ2F4d
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQfF7tirM8yXjnyzA7NqzzFVxvJyaQ2F4d
+A20571 TMb3kMSDZ5EfqBAmH4FSWmbo9uQM4YMxmbp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMb3kMSDZ5EfqBAmH4FSWmbo9uQM4YMxmbp
+A20569 TMFyMnpiHF9gGFagctdTCeFCQBNUwSwtV3R
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFyMnpiHF9gGFagctdTCeFCQBNUwSwtV3R
+A2066 TML7riRKKMHbWSGqLyK4HxoCQKqKzTVB8vi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TML7riRKKMHbWSGqLyK4HxoCQKqKzTVB8vi
+A20871 TML9a4YXWqFnyCnCtv3PV3KRAWAJfgUtRkJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TML9a4YXWqFnyCnCtv3PV3KRAWAJfgUtRkJ
+A20726 TMGoCCv6yYnTAUkTrc8dveAgwgg5UZarXPd
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGoCCv6yYnTAUkTrc8dveAgwgg5UZarXPd
+A20594 TMQ8Bm7aWYCxk4wtfYa41smKyPpCJx5jSPY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQ8Bm7aWYCxk4wtfYa41smKyPpCJx5jSPY
+A20572 TMcTLukZR1V5yw7QDXp7EP4NEg4PKa3viP8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcTLukZR1V5yw7QDXp7EP4NEg4PKa3viP8
+A20530 TMTj39PmLmRR1gVsiPYbcYiUESvehW9TCXi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTj39PmLmRR1gVsiPYbcYiUESvehW9TCXi
+A20567 TMYiQVFXjuPKvRhgHjXYhQ51dVq8oauFJ61
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYiQVFXjuPKvRhgHjXYhQ51dVq8oauFJ61
+A20766 TMbgpFiLSh8EaDeDdVSws7atXxpHeCdYEdr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbgpFiLSh8EaDeDdVSws7atXxpHeCdYEdr
+A20595 TMVW2YEitXXqu6YQfnoHvgA5A1ztvJTKWWR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVW2YEitXXqu6YQfnoHvgA5A1ztvJTKWWR
+A20537 TMQewWV8RvP4qxUWfeWTW3bE78HdmvjjpmK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQewWV8RvP4qxUWfeWTW3bE78HdmvjjpmK
+A20577 TMTQ8zPMHzXq7efhAr5WCVjbr3Ra7GtD57y
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTQ8zPMHzXq7efhAr5WCVjbr3Ra7GtD57y
+A20573 TMYu5rHtMveAMYqyNBWySyg7JEDpQfwxsHp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYu5rHtMveAMYqyNBWySyg7JEDpQfwxsHp
+A20874 TMWCK1uwPZ8T31RS7BSr46Le3x9NVvGnCzP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWCK1uwPZ8T31RS7BSr46Le3x9NVvGnCzP
+A20984 TMFGpSKVGUWyY9KM7MtjnWHsoVZgL7vXrit
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFGpSKVGUWyY9KM7MtjnWHsoVZgL7vXrit
+A20969 TMGeNgtX7ZNSbWyzaNPemUEqQMzPnSinYJG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGeNgtX7ZNSbWyzaNPemUEqQMzPnSinYJG
+A214885 TMMqwV3t4KTRNV9jTMbqAuwbJ1HEEh4Nebe
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMqwV3t4KTRNV9jTMbqAuwbJ1HEEh4Nebe
+A21204 TMPSfy4j66GjGMAwK2rsJHQuayPHygfkmko
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPSfy4j66GjGMAwK2rsJHQuayPHygfkmko
+A21474 TMF4f7rNjgUnGEhyst6UQhs75a1qq5JbvGB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMF4f7rNjgUnGEhyst6UQhs75a1qq5JbvGB
+A213770 TMQxZFqqVSKbBepDYc4obUz7Jc6HYiV8scY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQxZFqqVSKbBepDYc4obUz7Jc6HYiV8scY
+A21194 TMKcBGMgvesTmQQCcGsdc1v8rCGVwhWZrFA
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKcBGMgvesTmQQCcGsdc1v8rCGVwhWZrFA
+A2089 TMZPztSeAqZLmnvbm7zNnTyKSkD4byqWpqN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZPztSeAqZLmnvbm7zNnTyKSkD4byqWpqN
+A21614 TMU5TLEa2uQDBBkK9KJipmVscTFrbnhC34P
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMU5TLEa2uQDBBkK9KJipmVscTFrbnhC34P
+A21454 TMS1U4NG8citb4Cr6mRDzcinVzqjosdysJr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMS1U4NG8citb4Cr6mRDzcinVzqjosdysJr
+A212133 TMHaNiSSiVVPgyd4YMUCUKq1cqouhudRqH1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHaNiSSiVVPgyd4YMUCUKq1cqouhudRqH1
+A21524 TMNXACh6hxpt97CkKi8b4Cybxyk4hXhd4Yo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNXACh6hxpt97CkKi8b4Cybxyk4hXhd4Yo
+A21484 TMF2ujGEAgeMEuVgQnaN8hujygMJdem7N3N
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMF2ujGEAgeMEuVgQnaN8hujygMJdem7N3N
+A212699 TMWfGzLLJSAagKgjSbdTzaUPNYmUAxVRxtV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWfGzLLJSAagKgjSbdTzaUPNYmUAxVRxtV
+A212850 TMF1zNtuWvDTmPL8moaAf7tUVjtGWrbMAKW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMF1zNtuWvDTmPL8moaAf7tUVjtGWrbMAKW
+A20973 TMFgHrWbVs8gtVzv47zSSpEaXgqDf3Xxtrq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFgHrWbVs8gtVzv47zSSpEaXgqDf3Xxtrq
+A21064 TMT23i2UQGVoVeMA3AxqLJnnB9ngogshKni
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMT23i2UQGVoVeMA3AxqLJnnB9ngogshKni
+A21294 TMXGj9k2CdhCHMZrbidCFnmRKBr8kyQKvk6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXGj9k2CdhCHMZrbidCFnmRKBr8kyQKvk6
+A21334 TMGQwzRJUg9TU6U9cCDDL3LBvuJ2xCJT7Su
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGQwzRJUg9TU6U9cCDDL3LBvuJ2xCJT7Su
+A217471 TMYcZ9MgCeqTEakzCAnRh716kAWRQgsYrZC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYcZ9MgCeqTEakzCAnRh716kAWRQgsYrZC
+A220186 TMEqt7XTZ7mVhQyUTzhJm765JCK2pgRfSCD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEqt7XTZ7mVhQyUTzhJm765JCK2pgRfSCD
+A21734 TMNuZLBrLVeMBcv9J3gcmvw2UQ4R2ZyZ2tm
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNuZLBrLVeMBcv9J3gcmvw2UQ4R2ZyZ2tm
+A22000 TMH4V8Lv7xqJj4HXsaiwLVfUYAbpb46nJ4h
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMH4V8Lv7xqJj4HXsaiwLVfUYAbpb46nJ4h
+A21629 TMGPqdir8wFDdGPMSJNKXFwDjxHZhJWy8H6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGPqdir8wFDdGPMSJNKXFwDjxHZhJWy8H6
+A22117 TMWvLTQCuZ8HGrAR2F31RhpdXbzWXvjSTR5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWvLTQCuZ8HGrAR2F31RhpdXbzWXvjSTR5
+A21714 TMQpnJ1A9gUbbKx6FFmZiysDYwzWR2W88w8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQpnJ1A9gUbbKx6FFmZiysDYwzWR2W88w8
+A22126 TMFNTQMBxd6EwcVhE3F7h7CBprzcTj26aCr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFNTQMBxd6EwcVhE3F7h7CBprzcTj26aCr
+A218722 TMF7qh2DfrCj6kKB4cKYCffmcK99HNBzUqJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMF7qh2DfrCj6kKB4cKYCffmcK99HNBzUqJ
+A218726 TMEpjNaDpEMqwXZ2BAedyCc7xxxaVZLNxKR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEpjNaDpEMqwXZ2BAedyCc7xxxaVZLNxKR
+A218734 TMKrN75R7XvJJHAnSH1Sc2TqusPP25r61K4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKrN75R7XvJJHAnSH1Sc2TqusPP25r61K4
+A21664 TMH6vdVeuQLGJNuZmiAWKq61UHzUZmyGSx4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMH6vdVeuQLGJNuZmiAWKq61UHzUZmyGSx4
+A220528 TMby3kpZxg6SSECe6GKDYkkTvdQKRg3ooDc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMby3kpZxg6SSECe6GKDYkkTvdQKRg3ooDc
+A22107 TMGSo3oAFwS9sJQ3n1TMkSBGR1iLVBMhFa2
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGSo3oAFwS9sJQ3n1TMkSBGR1iLVBMhFa2
+A22104 TMFvZZkva4k4RoXxEb5eVjEUehLe42gw8kn
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFvZZkva4k4RoXxEb5eVjEUehLe42gw8kn
+A219205 TMMNer4KJAvxTpMLaX9GxG69v7PYLtJPAAo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMNer4KJAvxTpMLaX9GxG69v7PYLtJPAAo
+A21964 TMHqwufEpcyfXKfv5XaCx51Ub8DqRYgnvNi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHqwufEpcyfXKfv5XaCx51Ub8DqRYgnvNi
+A21784 TMLk5YBKL7tVfq5si56JaHaXCTJZ3Ys991X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLk5YBKL7tVfq5si56JaHaXCTJZ3Ys991X
+A218738 TMXSrxfrFSmjbCERqDPsDFWDYCN5jbjfBpW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXSrxfrFSmjbCERqDPsDFWDYCN5jbjfBpW
+A21844 TMZ9wg3L5G1dmuNoWVU5rQwwdR5YhnuHjun
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZ9wg3L5G1dmuNoWVU5rQwwdR5YhnuHjun
+A223270 TMUhb4b1TKUB54wNuZNU7AM3VQYxfU5Crc2
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUhb4b1TKUB54wNuZNU7AM3VQYxfU5Crc2
+A22397 TMYhQzvWYnph8ewCmNbyq3NMT9kBD8VDY1H
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYhQzvWYnph8ewCmNbyq3NMT9kBD8VDY1H
+A221904 TMdVprg6cBFGHSibgMtaLJRF1w7iviU3wnk
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdVprg6cBFGHSibgMtaLJRF1w7iviU3wnk
+A2260 TMUtmgZVpv36JLdYDhrbX7AG4LmqwvT2KJ5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUtmgZVpv36JLdYDhrbX7AG4LmqwvT2KJ5
+A227137 TMGfMEKjQCKyzs5CJiH6HpEYzdvh7ETB8T5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGfMEKjQCKyzs5CJiH6HpEYzdvh7ETB8T5
+A221906 TMWpxs64sCpmwzJu89gZDsroVxssmoiUoxS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWpxs64sCpmwzJu89gZDsroVxssmoiUoxS
+A22376 TMVFy3RKgmoUKuvUStYziKHtTiqd1HzjvgD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVFy3RKgmoUKuvUStYziKHtTiqd1HzjvgD
+A226201 TMY2BwFSjwZQB8y1Gi6tJGw4ageQLdcNbHZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMY2BwFSjwZQB8y1Gi6tJGw4ageQLdcNbHZ
+A224384 TMQTjHar2BmwdTATg867XKwY1cc1YbqH3rr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQTjHar2BmwdTATg867XKwY1cc1YbqH3rr
+A224329 TMWVRRiLah31NG8DVS9sSBobdw8Bm7xtVqr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWVRRiLah31NG8DVS9sSBobdw8Bm7xtVqr
+A22349 TMLPbq3eTxoXGxGCh1RkBGdZ7KTavWNTNq5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLPbq3eTxoXGxGCh1RkBGdZ7KTavWNTNq5
+A226265 TMcB2ddLopKj82EjQ59Nd3Lhofw76ox1sVi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcB2ddLopKj82EjQ59Nd3Lhofw76ox1sVi
+A221909 TMcAnp4kpLLYHuyFfCGZrVVd7c5Mxr2HL8z
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcAnp4kpLLYHuyFfCGZrVVd7c5Mxr2HL8z
+A224328 TMdW5R6ZRj9HaPkexHWmkj7y5ZbuAfzYKST
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdW5R6ZRj9HaPkexHWmkj7y5ZbuAfzYKST
+A22412 TMZuidQoHMpzS6BbCA3Eki7V4zFLv5jhH4X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZuidQoHMpzS6BbCA3Eki7V4zFLv5jhH4X
+A22362 TMJgPVsB4E5eu1mDd2Zt5oLWNZfiNyAiv8a
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJgPVsB4E5eu1mDd2Zt5oLWNZfiNyAiv8a
+A2262 TMJwV3Ka43d8p1MXSyb8zcd8bH18g2fkCsS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJwV3Ka43d8p1MXSyb8zcd8bH18g2fkCsS
+A22142 TMGUimoLrfcWRQA6NL3HUiCgaaoR34jxT1u
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGUimoLrfcWRQA6NL3HUiCgaaoR34jxT1u
+A226199 TMYy7jDCCM342cMsixpvqmjcWHDfcBGqTrs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYy7jDCCM342cMsixpvqmjcWHDfcBGqTrs
+A22402 TMMLE2vKbNFEV7LcaCRtKXUwSerLMnLj5HW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMLE2vKbNFEV7LcaCRtKXUwSerLMnLj5HW
+A228840 TMXj4QktDNat5etziaP7XiKWEfzsDaY6VWQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXj4QktDNat5etziaP7XiKWEfzsDaY6VWQ
+A23952 TMFECvKt9UiNvJJQRcBYPs8V4UWu5A8NShm
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFECvKt9UiNvJJQRcBYPs8V4UWu5A8NShm
+A23954 TMJjqmdZBaprxDSAWVcxVETsdTTtecK2F8K
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJjqmdZBaprxDSAWVcxVETsdTTtecK2F8K
+A227138 TMa1WehzKYtgpEyibFyni5hTT6NQPrw8fjC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMa1WehzKYtgpEyibFyni5hTT6NQPrw8fjC
+A24064 TMXEGMSQtgAwwNrxiMksc1oCkW29rf7HCrJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXEGMSQtgAwwNrxiMksc1oCkW29rf7HCrJ
+A24067 TMVHACudNpyLVs4j6QxWioooeSH7u8n6oLD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVHACudNpyLVs4j6QxWioooeSH7u8n6oLD
+A2276 TMMwwmZk1LuqzhnJfZ412ddKNyC27vxnyGr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMwwmZk1LuqzhnJfZ412ddKNyC27vxnyGr
+A2282 TMb49aYB2AGsqbJwgEzNTCQZWi1QSU2W5dJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMb49aYB2AGsqbJwgEzNTCQZWi1QSU2W5dJ
+A23619 TMQosU65PRZVd5JgD5mwSiWH9mPzXuyPst4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQosU65PRZVd5JgD5mwSiWH9mPzXuyPst4
+A24074 TMUf3Vy9K8uxqqJdLoNsynVpEEQDqjZ5niV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUf3Vy9K8uxqqJdLoNsynVpEEQDqjZ5niV
+A233744 TMRAXzMzWuLSSVUsyYdRrCijXjsvG4ZBmww
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRAXzMzWuLSSVUsyYdRrCijXjsvG4ZBmww
+A2275 TML8Jumr7BFXBU1XMEaizLYNF5hbvRrwvyZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TML8Jumr7BFXBU1XMEaizLYNF5hbvRrwvyZ
+A229572 TMY9daMNLZkC4vws4wso7mAsbZ4kVeFGFfK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMY9daMNLZkC4vws4wso7mAsbZ4kVeFGFfK
+A24037 TMckYWKGMz2f5ZB8UiEFJHbsuZugjmAAwtr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMckYWKGMz2f5ZB8UiEFJHbsuZugjmAAwtr
+A239094 TMXjiboaTrV8U4EeSWQi3a6HEDNTz8UhdjW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXjiboaTrV8U4EeSWQi3a6HEDNTz8UhdjW
+A2309 TMVwHcUQKohP9BbTpyCPGzT3reanY1Ssg5u
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVwHcUQKohP9BbTpyCPGzT3reanY1Ssg5u
+A24056 TMM6fZXudpA6jSaiMiraRJZEtt7V7e3x3bY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMM6fZXudpA6jSaiMiraRJZEtt7V7e3x3bY
+A23999 TMGRhP6WU1N5gvHUDuo1ypWRXXCvzeRaSR6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGRhP6WU1N5gvHUDuo1ypWRXXCvzeRaSR6
+A229136 TMM57NttvmWhsVfdjMS8zMMmUYTmJ8d4bnx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMM57NttvmWhsVfdjMS8zMMmUYTmJ8d4bnx
+A24057 TMZvtbYytARvr946mCgem7XyaKSaTTa6Kzf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZvtbYytARvr946mCgem7XyaKSaTTa6Kzf
+A241031 TMd94v2etnyAzDToaaDqiZ3XNGPdQSpzWZr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMd94v2etnyAzDToaaDqiZ3XNGPdQSpzWZr
+A241029 TMXDVMbfhu9HfRYwFYoM8N2U7VY6A4JScp7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXDVMbfhu9HfRYwFYoM8N2U7VY6A4JScp7
+A24118 TMPNrerRGQubQnvavRMeHANoZecb14DaXyL
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPNrerRGQubQnvavRMeHANoZecb14DaXyL
+A24088 TMaAY1GxrGhQZiaPmbV68EkHAb8iMdwqRGB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaAY1GxrGhQZiaPmbV68EkHAb8iMdwqRGB
+A24133 TMSxz4v6atthbuzbuZiePLRhymA374hawsV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSxz4v6atthbuzbuZiePLRhymA374hawsV
+A24170 TMc65niH3pCZf4yaUamNf72USy392iyuu7a
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMc65niH3pCZf4yaUamNf72USy392iyuu7a
+A24139 TMWMTCqifLBGGFGYPTSrevhBX1kKuyVDEB9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWMTCqifLBGGFGYPTSrevhBX1kKuyVDEB9
+A24102 TMXCEB3JHJ9qde6fTfACgyGp6pxK1MAmMdc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXCEB3JHJ9qde6fTfACgyGp6pxK1MAmMdc
+A24167 TMNpHzQYdsteYniWd3xKSeTrYWEJNeJdLDZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNpHzQYdsteYniWd3xKSeTrYWEJNeJdLDZ
+A24434 TMXMEqnw1UVV3HHJWs6meaGLbbBnFVosMy1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXMEqnw1UVV3HHJWs6meaGLbbBnFVosMy1
+A24086 TMRHza4KaEP6Ph1H2QbxqYVNmdW3jZ3ez6s
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRHza4KaEP6Ph1H2QbxqYVNmdW3jZ3ez6s
+A24116 TMXwhh3BFFmq6LwprUhsgqegFHVtRfQfYZw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXwhh3BFFmq6LwprUhsgqegFHVtRfQfYZw
+A2446 TMNiA7YPxGpmzYsB11rQ8eJyY7MMym1aM9T
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNiA7YPxGpmzYsB11rQ8eJyY7MMym1aM9T
+A24148 TMPdGQzBuQHyqyJbALrWocmhJBzK9gvicAz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPdGQzBuQHyqyJbALrWocmhJBzK9gvicAz
+A24439 TMFDrWHm2MY4n8F53t5wLyuy5kwnNHMuX1y
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFDrWHm2MY4n8F53t5wLyuy5kwnNHMuX1y
+A24141 TMP4sozTvUiGXTsqizPSqc9HEZF6jUKhFrt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMP4sozTvUiGXTsqizPSqc9HEZF6jUKhFrt
+A24134 TMbYnAidyCMQvAjA4EWcLSnMfqiVWHQtcsE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbYnAidyCMQvAjA4EWcLSnMfqiVWHQtcsE
+A24444 TMQg9EUPRPuGw4X51mKx8ZqtUjys2j1gNWf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQg9EUPRPuGw4X51mKx8ZqtUjys2j1gNWf
+A24091 TMMjbouc1n5EY25v7Y6uyyMMUaDViXbVCB5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMjbouc1n5EY25v7Y6uyyMMUaDViXbVCB5
+A24346 TMRVTod8FtA1kESKhA6FP621QyRXg64frSX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRVTod8FtA1kESKhA6FP621QyRXg64frSX
+A255435 TMRbkFAR94ViUp3RBWyiwbHjYc6j1C2aHLu
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRbkFAR94ViUp3RBWyiwbHjYc6j1C2aHLu
+A257285 TMTDZEFPHRmkrHFspvy3hJHMbAv8xHcbTe3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTDZEFPHRmkrHFspvy3hJHMbAv8xHcbTe3
+A253208 TMMxvwYbJKNeqHqt9tHorTuruKk2BJo9FK4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMxvwYbJKNeqHqt9tHorTuruKk2BJo9FK4
+A2571 TMd3CnVpjGTG5QeFpHT1ZW61ymFBU6Cke19
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMd3CnVpjGTG5QeFpHT1ZW61ymFBU6Cke19
+A254641 TMWAXXFnBtz9otp4VeT2b9FhRQ7yM6T5DcN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWAXXFnBtz9otp4VeT2b9FhRQ7yM6T5DcN
+A250162 TMdzXkgpJzxhqnvXbVJnFFT35QBFQN1GfmL
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdzXkgpJzxhqnvXbVJnFFT35QBFQN1GfmL
+A256832 TMZPZD2uHfDvwc6whoqjeTdZiuCFfRqBQrx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZPZD2uHfDvwc6whoqjeTdZiuCFfRqBQrx
+A245020 TMWnYDQMYz8VYAmew7ae2fqA4GegeVDuJPN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWnYDQMYz8VYAmew7ae2fqA4GegeVDuJPN
+A256512 TMFN26z87GRJKdP75Suz8Jsmtj1B7i5StxE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFN26z87GRJKdP75Suz8Jsmtj1B7i5StxE
+A2451 TMNmDS18st5pUfgmkzMDRvJxNxtRoyW3VKL
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNmDS18st5pUfgmkzMDRvJxNxtRoyW3VKL
+A24772 TMbLXYPZJLXGwZrTjTJctW6hhdmAZRrcHG8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbLXYPZJLXGwZrTjTJctW6hhdmAZRrcHG8
+A254 TMUDj58EYKUC1Vgw4ccwjJvEnQohYQmTAJC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUDj58EYKUC1Vgw4ccwjJvEnQohYQmTAJC
+A25007 TMLmETAFd5Eu1FbLmr82YgirNshK9txZLXT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLmETAFd5Eu1FbLmr82YgirNshK9txZLXT
+A254620 TMVRReTjQyciDSebLhckY4S8QvbJk8H8rTt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVRReTjQyciDSebLhckY4S8QvbJk8H8rTt
+A2453 TMdC7ekuHSG1b3HNPxRcLaLTKhX39aN8ziD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdC7ekuHSG1b3HNPxRcLaLTKhX39aN8ziD
+A250652 TMd5fmDJEhpDRxsaLYDMF1nb2XKk5jMJp92
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMd5fmDJEhpDRxsaLYDMF1nb2XKk5jMJp92
+A250212 TMLLSzaa3zE6fqyPVs7aXCxiDC2N7eM9vu6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLLSzaa3zE6fqyPVs7aXCxiDC2N7eM9vu6
+A257449 TMWzrCNRg3q9qaVpbB5bydA3r8WUMhEy3fV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWzrCNRg3q9qaVpbB5bydA3r8WUMhEy3fV
+A255433 TMTXRxy4UJfX613Fxi5j2PgyPwCATkuZHQd
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTXRxy4UJfX613Fxi5j2PgyPwCATkuZHQd
+A253826 TMUGCZ7AQq42STBeyvKjSEBR737vupmHhiY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUGCZ7AQq42STBeyvKjSEBR737vupmHhiY
+A25985 TMJW1wZVbbEMbNbuTq6Jsa3qGmzGqCT7mqV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJW1wZVbbEMbNbuTq6Jsa3qGmzGqCT7mqV
+A25998 TMLELmBNE4dGFktsR4juDcC1doBMNUnZ1S1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLELmBNE4dGFktsR4juDcC1doBMNUnZ1S1
+A25991 TMSDGrnGMNUPYBDuKHiZta1prSVJzfGn8BH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSDGrnGMNUPYBDuKHiZta1prSVJzfGn8BH
+A25957 TMTxAgLQ3QEuCsimobLUJhWYfopJDSiSXym
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTxAgLQ3QEuCsimobLUJhWYfopJDSiSXym
+A26108 TMdx2yiEjdnbpdBt7G2Y3z5TwzAUHFFVC3h
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdx2yiEjdnbpdBt7G2Y3z5TwzAUHFFVC3h
+A25936 TMMjWpgaQ8H7VfTTYKQ5uq9VSDPhFTVrqH4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMjWpgaQ8H7VfTTYKQ5uq9VSDPhFTVrqH4
+A25968 TMX1sXYVzuPPNzJnpfuNgg5BLUtTRxXsmq9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMX1sXYVzuPPNzJnpfuNgg5BLUtTRxXsmq9
+A25951 TMFcYyFqf6A9YdUbWUZvXHeqfaqwkW1QNeY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFcYyFqf6A9YdUbWUZvXHeqfaqwkW1QNeY
+A25955 TMYW4ca14rw3hNhikgWnhREiQwYN3ajdzjy
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYW4ca14rw3hNhikgWnhREiQwYN3ajdzjy
+A25929 TMWZpypffwFNNTnE3mDEyu8g7JCE6pAYwtB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWZpypffwFNNTnE3mDEyu8g7JCE6pAYwtB
+A259319 TMaQFbw8142jHJwYG6FSuNg6p4Jo9Sm9dqF
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaQFbw8142jHJwYG6FSuNg6p4Jo9Sm9dqF
+A262594 TMdeAWT5i6MjKanMgZbdkse47jA1CsWheHx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdeAWT5i6MjKanMgZbdkse47jA1CsWheHx
+A25940 TMKw8iU4Q1iBQt6MT2pTnQNHt7S1sknkMba
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKw8iU4Q1iBQt6MT2pTnQNHt7S1sknkMba
+A25937 TMNuUn76jokzFpYuawb3zepARAxry7ur21V
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNuUn76jokzFpYuawb3zepARAxry7ur21V
+A261391 TMcsoveMckqbq48NJXL5MUUNYdMd3cSRNFY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcsoveMckqbq48NJXL5MUUNYdMd3cSRNFY
+A25994 TMMYX9nhAWgWANTV7idUM7qqNoyTATLFyvc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMYX9nhAWgWANTV7idUM7qqNoyTATLFyvc
+A25956 TMQ7bTcW3KKTvkFBRtKrxhfNYYGSsADvqxN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQ7bTcW3KKTvkFBRtKrxhfNYYGSsADvqxN
+A257583 TMa5aPbej8nsCV9ZWFbgBgjyTSnihHuNzRg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMa5aPbej8nsCV9ZWFbgBgjyTSnihHuNzRg
+A259546 TMN2kVwW1MCNFdSEqm3fWGNLwGh2KscstoE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMN2kVwW1MCNFdSEqm3fWGNLwGh2KscstoE
+A25995 TMKJ6UMAL9MZkxvSDfEE85ufV1RQDRr4ULV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKJ6UMAL9MZkxvSDfEE85ufV1RQDRr4ULV
+A271939 TMXHKPAVpQ3mDC53uaRmEnBeibkqYNDWHSq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXHKPAVpQ3mDC53uaRmEnBeibkqYNDWHSq
+A272263 TMJqocrwJwjq6v15ieBAodGFh2r4rSNvuQ3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJqocrwJwjq6v15ieBAodGFh2r4rSNvuQ3
+A26543 TMSFxKJHfFVwdbJXboD5Y7mDcvdLxaLo5ff
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSFxKJHfFVwdbJXboD5Y7mDcvdLxaLo5ff
+A277168 TMUdPcfBFYbiRTKmdD2cUqVjGweu5PcFMiN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUdPcfBFYbiRTKmdD2cUqVjGweu5PcFMiN
+A2674 TMTSNzdnsGJtYGcQQL8XKXJzvWrjYw85jko
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTSNzdnsGJtYGcQQL8XKXJzvWrjYw85jko
+A2671 TMM2UGPvcTfA81fxshEFbubsD1rMte2skyj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMM2UGPvcTfA81fxshEFbubsD1rMte2skyj
+A262787 TMFr8x4vyT9nYMu1pGj1xGGp6mXfbg96JYc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFr8x4vyT9nYMu1pGj1xGGp6mXfbg96JYc
+A267797 TMEtqLdTWM8nMzmeP2r35n7V9nCV6hUuWif
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEtqLdTWM8nMzmeP2r35n7V9nCV6hUuWif
+A276 TMZAHhf8FWJVFp21MwAYsvAZRUxAqtCyNtW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZAHhf8FWJVFp21MwAYsvAZRUxAqtCyNtW
+A276509 TMHjYyUmS1vgLrncCesvkg4V2QBgQkqvfbL
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHjYyUmS1vgLrncCesvkg4V2QBgQkqvfbL
+A2700 TMZXVvfQoHA1MYkpqcTUGXKqjEhub5PanHG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZXVvfQoHA1MYkpqcTUGXKqjEhub5PanHG
+A269025 TMRtuDasyWKh1ryqo6ukusFm5uYGz6nnEy3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRtuDasyWKh1ryqo6ukusFm5uYGz6nnEy3
+A26324 TMdpVS5GiaioR9vXPgPT1a8y5hQqeA5wo6x
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdpVS5GiaioR9vXPgPT1a8y5hQqeA5wo6x
+A268730 TMc7EAhGq4jJKu2zLFVPRHVygqYhEGFb6GN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMc7EAhGq4jJKu2zLFVPRHVygqYhEGFb6GN
+A268839 TMcGrNB1trT3hQMCcx2bJC7Ssi7HVbQf5tP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcGrNB1trT3hQMCcx2bJC7Ssi7HVbQf5tP
+A2690 TMVrsKeysEk8ci18Sb49MJUhmsuxyHkKd2s
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVrsKeysEk8ci18Sb49MJUhmsuxyHkKd2s
+A2697 TMLrTAzKDWSsUz63Rnfkh259iqFVAPzSmEA
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLrTAzKDWSsUz63Rnfkh259iqFVAPzSmEA
+A277355 TMaph1wq9HhqcxoVfEAfrCEJj1YPoxxo8oN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaph1wq9HhqcxoVfEAfrCEJj1YPoxxo8oN
+A26727 TMKksjvy5u3eGju1Z6y3s9K4Rv6vxcoxGFT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKksjvy5u3eGju1Z6y3s9K4Rv6vxcoxGFT
+A274755 TMRuek3y6Z9WxdkAVdJgVNRf7fLnTjVSSw5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRuek3y6Z9WxdkAVdJgVNRf7fLnTjVSSw5
+A27992 TMbfrWxGnuFA3cHyBBZ25SGW9Xk1JspWfqT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbfrWxGnuFA3cHyBBZ25SGW9Xk1JspWfqT
+A28009 TMNPKzKGMv9hC65pi6Awu6UyXEQnNdSQYzx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNPKzKGMv9hC65pi6Awu6UyXEQnNdSQYzx
+A27964 TMRkPkWn8MwJ5gGBdDqivBTDcWDSeLQv7Y1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRkPkWn8MwJ5gGBdDqivBTDcWDSeLQv7Y1
+A277491 TMGa8ZjFEWSTuemfxEpxikCY2Uo7eAy9rtn
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGa8ZjFEWSTuemfxEpxikCY2Uo7eAy9rtn
+A28025 TMF7ioHhicquF4s4HXCQHNXFKanuYT61W4a
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMF7ioHhicquF4s4HXCQHNXFKanuYT61W4a
+A28012 TMTFrPPwgTm7QJ4wbJQeUAnUVK6e8ttkJop
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTFrPPwgTm7QJ4wbJQeUAnUVK6e8ttkJop
+A28019 TMa1YRoBMxb4iHStgshpP2k3SZsvX8qLXBj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMa1YRoBMxb4iHStgshpP2k3SZsvX8qLXBj
+A28022 TMUnsNPaspxKd3j72eLVirqMoZ3C7SyJVDH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUnsNPaspxKd3j72eLVirqMoZ3C7SyJVDH
+A28018 TMMcUfUyk3PypbbiZku29qYCQUkMWiuVd4z
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMcUfUyk3PypbbiZku29qYCQUkMWiuVd4z
+A28006 TMV4ovbuhGVBo2USuqCzZRwGHKe8G3CAWg9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMV4ovbuhGVBo2USuqCzZRwGHKe8G3CAWg9
+A28020 TMZtoeZwX5VS8AfPUCy4pTKhQD73K1efdCg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZtoeZwX5VS8AfPUCy4pTKhQD73K1efdCg
+A27990 TMVraGEBFsZ16VKMXzTGbVp34WVYF4iQvgq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVraGEBFsZ16VKMXzTGbVp34WVYF4iQvgq
+A28024 TMTQvtNwDBBj2uTXds52nDQVgGiv9YKiRTQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTQvtNwDBBj2uTXds52nDQVgGiv9YKiRTQ
+A27942 TMKopZ3h78KBxBXcEK6gCfdTZQDdL4nCAWG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKopZ3h78KBxBXcEK6gCfdTZQDdL4nCAWG
+A27871 TMFrYyKc8Q6aWsv9thDhBqkVYMsC61a3bJw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFrYyKc8Q6aWsv9thDhBqkVYMsC61a3bJw
+A280211 TMc2NuTtPuvcZbPdzQr7yw1LLp8TTYUHJk6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMc2NuTtPuvcZbPdzQr7yw1LLp8TTYUHJk6
+A28003 TMFWJBoznnSPHzK1Zeqw1kS3L4LSQnAmGWB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFWJBoznnSPHzK1Zeqw1kS3L4LSQnAmGWB
+A28027 TMFQpNahD6BTBJjpzGvmQhUGvgP17RpBeKZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFQpNahD6BTBJjpzGvmQhUGvgP17RpBeKZ
+A27982 TMPcBGQLyWR3fXQNj4FrUSo96Qe27v6GZE5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPcBGQLyWR3fXQNj4FrUSo96Qe27v6GZE5
+A277748 TMVtr4VYifwCaccdX6nvdwidRdSrua8MC5t
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVtr4VYifwCaccdX6nvdwidRdSrua8MC5t
+A28106 TMNB12hMc5fSuFNHHN3HGdqbPpbhCKPc5Bg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNB12hMc5fSuFNHHN3HGdqbPpbhCKPc5Bg
+A28120 TMXaysnRmQFrMDaYZXKZkMtmkR6NykVgrrv
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXaysnRmQFrMDaYZXKZkMtmkR6NykVgrrv
+A28118 TMTp98oKgBm4baTeLQBkRSvq4EZewfFRR4F
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTp98oKgBm4baTeLQBkRSvq4EZewfFRR4F
+A28030 TMcHhEuxwUak1SnftQictw9vAWyG6dxuGXG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcHhEuxwUak1SnftQictw9vAWyG6dxuGXG
+A28112 TMUgCgR7XBo3NDjVUp4APEM18BxWMduSFfx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUgCgR7XBo3NDjVUp4APEM18BxWMduSFfx
+A28122 TMQPFAE46Ay4xpHgpJpdyFJopWtiu4QiXoJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQPFAE46Ay4xpHgpJpdyFJopWtiu4QiXoJ
+A28115 TMRAKQm64Fz94LwAMPbfg331SskqiQBHLdw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRAKQm64Fz94LwAMPbfg331SskqiQBHLdw
+A28139 TMRDGmbyNLQxv5mi5uTj3KWe3H9hP7Dyc4X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRDGmbyNLQxv5mi5uTj3KWe3H9hP7Dyc4X
+A28057 TMPTdVMVfdRFgRRWaiXu7xSqUYNzB6ZC5na
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPTdVMVfdRFgRRWaiXu7xSqUYNzB6ZC5na
+A28130 TMTn1MBRXwEobC9nzCNhe8T8pNTKvdmRtJ9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTn1MBRXwEobC9nzCNhe8T8pNTKvdmRtJ9
+A28036 TMPHRcXk5nsC3J8kFGDduEqzXNgPtjxWDf9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPHRcXk5nsC3J8kFGDduEqzXNgPtjxWDf9
+A28141 TMdJY2x1A5YrncknWV2ghQyxwTNs1AbuVVt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdJY2x1A5YrncknWV2ghQyxwTNs1AbuVVt
+A28081 TMMf6H5iuPFfgB7w9g4uuJMTKHpscV7tgwe
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMf6H5iuPFfgB7w9g4uuJMTKHpscV7tgwe
+A28071 TMLVfsH9kcQfCwpjCmt7eSvfHz2jLaoCPcm
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLVfsH9kcQfCwpjCmt7eSvfHz2jLaoCPcm
+A28065 TMQjKcqNrmDmXoCQwAkMr6dNTeLT5qRxL5R
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQjKcqNrmDmXoCQwAkMr6dNTeLT5qRxL5R
+A28117 TMXho4RgRQuXmv2uzJtAE21CWxMQ1m3FWnn
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXho4RgRQuXmv2uzJtAE21CWxMQ1m3FWnn
+A28061 TMRtbbLstFXFNVFsbPetG7CfG3VYkj2rXF2
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRtbbLstFXFNVFsbPetG7CfG3VYkj2rXF2
+A28144 TMHp6faSL57eeg174C5FerXwveYVaf29dh6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHp6faSL57eeg174C5FerXwveYVaf29dh6
+A28035 TMPSQHSxUwAmVN7NZtQRrPbuxB85TunCTpw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPSQHSxUwAmVN7NZtQRrPbuxB85TunCTpw
+A28080 TMRDz2HHvRGC2ngGeaiuFFsvcBfH6RFi6J7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRDz2HHvRGC2ngGeaiuFFsvcBfH6RFi6J7
+A287335 TMU8i9sdqxbyunwMFxqfFWwkvuWfRHqw18h
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMU8i9sdqxbyunwMFxqfFWwkvuWfRHqw18h
+A28403 TMEtSnVRXt3dUqb1D8k5tTUy78yA8ojMb1a
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEtSnVRXt3dUqb1D8k5tTUy78yA8ojMb1a
+A28192 TMMjmQXRNo8W5YXLiVuAkyaHQGzqp4V2tgU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMjmQXRNo8W5YXLiVuAkyaHQGzqp4V2tgU
+A28175 TMUQuMhSG7UqAtPbBphuBG1rXyaBUABPYSB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUQuMhSG7UqAtPbBphuBG1rXyaBUABPYSB
+A28169 TMEpG7qJmAs63WL78TWsbp93dSU852Z2fcb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEpG7qJmAs63WL78TWsbp93dSU852Z2fcb
+A28224 TMSXuswqByBej9QaEXWdyY524Bu8vcAgZLL
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSXuswqByBej9QaEXWdyY524Bu8vcAgZLL
+A28218 TMXTv1gpx4ZYxFCthHdDH5ii3AeHD4iPSbc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXTv1gpx4ZYxFCthHdDH5ii3AeHD4iPSbc
+A28178 TMdozxuGMQJE1DfSwjhLigTyP1PnsM2iiUi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdozxuGMQJE1DfSwjhLigTyP1PnsM2iiUi
+A28209 TMaVKegor6KALd3DYd8mUQFV9GaZh1G9EXP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaVKegor6KALd3DYd8mUQFV9GaZh1G9EXP
+A282901 TMY495E52ceuBMKGDb8YZuhEKcYBpR9no2q
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMY495E52ceuBMKGDb8YZuhEKcYBpR9no2q
+A289255 TMV48yHxm5XgiUudsTixJNVZSyz3GGKNRex
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMV48yHxm5XgiUudsTixJNVZSyz3GGKNRex
+A28147 TMTK8rDd71Fe53pDNEYmeqqM4ALp5t5k52z
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTK8rDd71Fe53pDNEYmeqqM4ALp5t5k52z
+A286286 TMRbxgtJq8Qxo1niJ4mNY3AMQCJCRRaShaX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRbxgtJq8Qxo1niJ4mNY3AMQCJCRRaShaX
+A28221 TMGHQ3K4NkUxL5V5jWNHLrNPZx1tbKRzg2J
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGHQ3K4NkUxL5V5jWNHLrNPZx1tbKRzg2J
+A28201 TMccSTifTsqNuym51ZQS7sAQxMRV3qKESdF
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMccSTifTsqNuym51ZQS7sAQxMRV3qKESdF
+A28155 TMLgeytfTU4kWdQzAqTdoHWLe3EoK1CDiMo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLgeytfTU4kWdQzAqTdoHWLe3EoK1CDiMo
+A288516 TMSHat6RxyzYGuWdJyQB9HVn7CNnd2yMAsV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSHat6RxyzYGuWdJyQB9HVn7CNnd2yMAsV
+A284434 TMGhh7aaQaWFD3BDCfEUN3FDQDDmrEgXV91
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGhh7aaQaWFD3BDCfEUN3FDQDDmrEgXV91
+A28204 TMTywSiVm7mdRPHw4VPqqutYmN9o1py8H1n
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTywSiVm7mdRPHw4VPqqutYmN9o1py8H1n
+A2866 TMdLtbtURdhdzS9DGGB2EbcARx8YwaXd6J9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdLtbtURdhdzS9DGGB2EbcARx8YwaXd6J9
+A2999 TMKG2FfPAtRTGYcKTBwHojy6esRiZbtyZue
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKG2FfPAtRTGYcKTBwHojy6esRiZbtyZue
+A298677 TMUaLG8gn2zzmpLvTaQJe9Tt4mzbpYNHhCH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUaLG8gn2zzmpLvTaQJe9Tt4mzbpYNHhCH
+A289948 TMYQX1VkhurEmePRQzxrbCV6x9xwZivpsv6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYQX1VkhurEmePRQzxrbCV6x9xwZivpsv6
+A291264 TMH5ewpJDGJwHgd94DngQgcgP3ueBxtqZjp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMH5ewpJDGJwHgd94DngQgcgP3ueBxtqZjp
+A302999 TMJeCNhP6CgCWrg4yMnpVxWvuzjuogucy99
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJeCNhP6CgCWrg4yMnpVxWvuzjuogucy99
+A291946 TMVSXPVuGmm2Y3e8jEcyGwPgMQyMRYH4fMo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVSXPVuGmm2Y3e8jEcyGwPgMQyMRYH4fMo
+A291484 TMUEx9EzLeXjj3Pb7EWt65nqbh97gVpC885
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUEx9EzLeXjj3Pb7EWt65nqbh97gVpC885
+A3013 TMYwjY1fcAMh5LKEM5f8ZKWjM3cxrfXtqH2
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYwjY1fcAMh5LKEM5f8ZKWjM3cxrfXtqH2
+A304832 TMLDPofWcGgNgbf5D8CBWb26uTJpZdv633D
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLDPofWcGgNgbf5D8CBWb26uTJpZdv633D
+A29767 TMP7A35d2eSLEWinh9vJsjFaPm7pwTXvNG4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMP7A35d2eSLEWinh9vJsjFaPm7pwTXvNG4
+A306472 TMLmDjB2rbuxyV4nCWPJhFy6Wv8Cp1eynRk
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLmDjB2rbuxyV4nCWPJhFy6Wv8Cp1eynRk
+A304827 TMT2FvDPoN3XLzdtQQ49s2WkdkkD6Ezwbti
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMT2FvDPoN3XLzdtQQ49s2WkdkkD6Ezwbti
+A303609 TMLRYT5N7oxiBEQgbnqX6hNzotVvLLsrY5U
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLRYT5N7oxiBEQgbnqX6hNzotVvLLsrY5U
+A302 TMT9Vi8b2MoviP1XXQk3y6fj9ZSddic2WNA
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMT9Vi8b2MoviP1XXQk3y6fj9ZSddic2WNA
+A289945 TMVcfR1MHnErhEEqiEh5ECm4azo5gPYiZui
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVcfR1MHnErhEEqiEh5ECm4azo5gPYiZui
+A29697 TMaSEKd3ZcyUh6siefR1qZTH58H6MgqrGN6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaSEKd3ZcyUh6siefR1qZTH58H6MgqrGN6
+A292542 TMNPXAGakEJrU8uihmaPUtcXvqaizfHKLCC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNPXAGakEJrU8uihmaPUtcXvqaizfHKLCC
+A305067 TMMzWJbWrvm8LPtHYfBuRmJfofazt4ep11H
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMzWJbWrvm8LPtHYfBuRmJfofazt4ep11H
+A294318 TMS8q9D2Y3o4mE6QBpP2i1zqDpMwsR9yas7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMS8q9D2Y3o4mE6QBpP2i1zqDpMwsR9yas7
+A302612 TMXdsciUKhd1t2o5TuUuSvmZV2RzS2pwk6i
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXdsciUKhd1t2o5TuUuSvmZV2RzS2pwk6i
+A332186 TML1wYhCjKerpeQYaxjttMmoaJuxE51ciy1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TML1wYhCjKerpeQYaxjttMmoaJuxE51ciy1
+A330135 TMM4w39yYzgjLJ7WijhjNFRJejaFhn5fEDk
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMM4w39yYzgjLJ7WijhjNFRJejaFhn5fEDk
+A306948 TMHHYPxPBVDjqeVfX3ufVYoopqAf4QMMkdV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHHYPxPBVDjqeVfX3ufVYoopqAf4QMMkdV
+A333385 TMRDXkg8EjyCSPFr8GTPQq8HG7VYoAhGNxC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRDXkg8EjyCSPFr8GTPQq8HG7VYoAhGNxC
+A3266 TMcRepVAn8YevD8v6tTZxHeCqceswum3zNi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcRepVAn8YevD8v6tTZxHeCqceswum3zNi
+A307172 TMU9YwXjd7bxxRtDcgErZbCiSszad8EzEHv
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMU9YwXjd7bxxRtDcgErZbCiSszad8EzEHv
+A3222 TMTzpaHxaQ2m1hw69pKryfHL2f3jE9WzVvh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTzpaHxaQ2m1hw69pKryfHL2f3jE9WzVvh
+A307169 TMKDJugC3sTABPoRv337TbMrh38iZdMhLYP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKDJugC3sTABPoRv337TbMrh38iZdMhLYP
+A327926 TMGayHRMWXZgoS3ke2Sp6kRb33s7S5kNEsd
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGayHRMWXZgoS3ke2Sp6kRb33s7S5kNEsd
+A320468 TMKncrR71xURHJMF5UbDuf9LVrvAqwMu1eU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKncrR71xURHJMF5UbDuf9LVrvAqwMu1eU
+A334991 TMXJwDVroVuubsRoidZnaC8xfgxNJ1KX5H7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXJwDVroVuubsRoidZnaC8xfgxNJ1KX5H7
+A307168 TMUjmWXGw4tzpQANQ7S7oSVEGEmFaZRDrXD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUjmWXGw4tzpQANQ7S7oSVEGEmFaZRDrXD
+A332185 TMUbw3eUEmnLm1mVFQJRsgq7YWkeLqv9nBT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUbw3eUEmnLm1mVFQJRsgq7YWkeLqv9nBT
+A332136 TMQqNeMtrV8Q696d9PCRrUS4BNn5tuVpqTf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQqNeMtrV8Q696d9PCRrUS4BNn5tuVpqTf
+A324265 TMNtnpkKhgE1ZcPSFiKXU4e2SnvmGUw4xrN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNtnpkKhgE1ZcPSFiKXU4e2SnvmGUw4xrN
+A325958 TMFo1TRMnDWKchX6cwkMBTkZkFki7PfSkHW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFo1TRMnDWKchX6cwkMBTkZkFki7PfSkHW
+A3261 TMHKcJEwHPAFn2sAhS3SiKkjKhaFsSDNTMw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHKcJEwHPAFn2sAhS3SiKkjKhaFsSDNTMw
+A321003 TMK5UfLDQgWGFmJpRCfuhBZ7Po7yoAvLRYK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMK5UfLDQgWGFmJpRCfuhBZ7Po7yoAvLRYK
+A332115 TMdFE74gWi9casNXJcBUtJ92dSs3dXdpbTX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdFE74gWi9casNXJcBUtJ92dSs3dXdpbTX
+A324269 TMTUo8X133xPrAyf6jfBKrG4n1JBmSa8dye
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTUo8X133xPrAyf6jfBKrG4n1JBmSa8dye
+A34000 TMSe5j3hpPd9mEkxhc2znPStCErDHZnUBfR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSe5j3hpPd9mEkxhc2znPStCErDHZnUBfR
+A350008 TMPDhNiqpUfoAeKqtAbeQUhQ9vDASgSz8kw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPDhNiqpUfoAeKqtAbeQUhQ9vDASgSz8kw
+A344114 TMYapRDp9o3BAV2YwKbAGo5BDtzpF8rxopE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYapRDp9o3BAV2YwKbAGo5BDtzpF8rxopE
+A34177 TMP68Ddg84Y352BCMJ17KobukS5yjdvTSb1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMP68Ddg84Y352BCMJ17KobukS5yjdvTSb1
+A34911 TMQbfj12FNbgQXp9643wqBo2tPQnMrYfVSg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQbfj12FNbgQXp9643wqBo2tPQnMrYfVSg
+A34975 TMWZEzbnfUxQp5UTTm8TWQ2nVenvjYDaw8X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWZEzbnfUxQp5UTTm8TWQ2nVenvjYDaw8X
+A346896 TMULpzWw4G9dAH7zwcg3D2o63vxwph6tyZs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMULpzWw4G9dAH7zwcg3D2o63vxwph6tyZs
+A339610 TMLLBxNQDRmKtLaJNqb7Gxst1hkMYY9kasq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLLBxNQDRmKtLaJNqb7Gxst1hkMYY9kasq
+A34910 TMUj89TeRy5iJr8r54DUVPNcA53aWGHgv4g
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUj89TeRy5iJr8r54DUVPNcA53aWGHgv4g
+A344260 TMQzRjrT4mqiH1dXGLfazhfyQcmvbv9Wbrj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQzRjrT4mqiH1dXGLfazhfyQcmvbv9Wbrj
+A337 TMYaEXEiLddu71r1d2ecBn4jHjnRtPEsrmn
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYaEXEiLddu71r1d2ecBn4jHjnRtPEsrmn
+A34001 TMVP2NLWabEAo3byVdTWRJGAAgts5q9AVR2
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVP2NLWabEAo3byVdTWRJGAAgts5q9AVR2
+A34976 TMTV7Qs6iu2SyfpnbgM68i1EYTbjD7XrdAJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTV7Qs6iu2SyfpnbgM68i1EYTbjD7XrdAJ
+A34940 TMXB3Wv9NK1Vvz4DPsaNVEoJtG5EDJCW55h
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXB3Wv9NK1Vvz4DPsaNVEoJtG5EDJCW55h
+A348332 TMV5gPatkXnV6xSkJ4rDMY458siRjQotH4Z
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMV5gPatkXnV6xSkJ4rDMY458siRjQotH4Z
+A343539 TMNikAvQgbeZXidN1XvEiw4VDtTzh92oFWd
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNikAvQgbeZXidN1XvEiw4VDtTzh92oFWd
+A347478 TMYfQJ2DpPCb7CDjfuYFgsfwTCv64c8jSyF
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYfQJ2DpPCb7CDjfuYFgsfwTCv64c8jSyF
+A34325 TMLCL5JyYuJuzPskd5BxsMrrBafpYL83onF
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLCL5JyYuJuzPskd5BxsMrrBafpYL83onF
+A33595 TMJ3eWVcWNX2mjSmE2tg7hHUDKQjRXAFntR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJ3eWVcWNX2mjSmE2tg7hHUDKQjRXAFntR
+A34673 TMSJN1wfxfQKhZkimoi2npwEabgEPkb8LGg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSJN1wfxfQKhZkimoi2npwEabgEPkb8LGg
+A35018 TMaWS86pZrMnQiPuk34Tjes6Q98XhSJ6rth
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaWS86pZrMnQiPuk34Tjes6Q98XhSJ6rth
+A3775 TMXakpxkDF43tTXYspV9zUaNPNz56D7XtWW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXakpxkDF43tTXYspV9zUaNPNz56D7XtWW
+A407 TMMRCYr2Zpa2sCRpmKB8gLKMAYNpWsRDoe8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMRCYr2Zpa2sCRpmKB8gLKMAYNpWsRDoe8
+A35265 TMKmaHBWTD8P5yJTM2RfxajGgRqCeUkJaBH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKmaHBWTD8P5yJTM2RfxajGgRqCeUkJaBH
+A352 TMXajyyLheLKe2NaM9N4SLN3vLXpY4oKzoJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXajyyLheLKe2NaM9N4SLN3vLXpY4oKzoJ
+A36291 TMF9mHQCyvfMmQZ3HETHD88jLgtMBGFuoHk
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMF9mHQCyvfMmQZ3HETHD88jLgtMBGFuoHk
+A41481 TMVyvXPjMrHJcyKKQyyHPJqCYKbpSFattTN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVyvXPjMrHJcyKKQyyHPJqCYKbpSFattTN
+A3956 TMHeepNvqUXQ75jKLwF3HSFR62KNtjWY6nZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHeepNvqUXQ75jKLwF3HSFR62KNtjWY6nZ
+A35021 TMdNTcGTsuHWw9KVxDefvZ58nyu7YWVihTx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdNTcGTsuHWw9KVxDefvZ58nyu7YWVihTx
+A35013 TMcNCojYB5aLum6cQFeRGP7rBovh3rsZZs7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcNCojYB5aLum6cQFeRGP7rBovh3rsZZs7
+A41840 TMHv3QA66oXWWQaRugiwdNBxSA2YfT8TGny
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHv3QA66oXWWQaRugiwdNBxSA2YfT8TGny
+A35017 TMT1usJ5mvH17WXMyFF18XEW35ZzJZMruxU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMT1usJ5mvH17WXMyFF18XEW35ZzJZMruxU
+A399 TMbYsVuA6YBPV4vpT5kfBFH4mc6SjZCaP4J
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbYsVuA6YBPV4vpT5kfBFH4mc6SjZCaP4J
+A4041 TMGpgHM56UAG5oVQf7hUdypqKLJbDWfivSP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGpgHM56UAG5oVQf7hUdypqKLJbDWfivSP
+A350384 TMS8fXtQuzeLr8n3Wj8mbnqDLr2iD7YSifa
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMS8fXtQuzeLr8n3Wj8mbnqDLr2iD7YSifa
+A3556 TMJ1trmMRtiNQTNH7MGtNHiuWQctMTNA7fg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJ1trmMRtiNQTNH7MGtNHiuWQctMTNA7fg
+A38057 TMQFCKr81EVCb4KYmonT7MxjiVxZz19tJNF
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQFCKr81EVCb4KYmonT7MxjiVxZz19tJNF
+A36800 TMGCd5d1BvjArgVZPSnkQQxq6XmZRhdACiz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGCd5d1BvjArgVZPSnkQQxq6XmZRhdACiz
+A36363 TMaHte1MgmTFpmgDpzHFg1mqMpUrPL7fdVa
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaHte1MgmTFpmgDpzHFg1mqMpUrPL7fdVa
+A4171 TMSRUHvwNLD22iaRWVz5ny1PbH58Y1mYb8o
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSRUHvwNLD22iaRWVz5ny1PbH58Y1mYb8o
+A42625 TMJ8sia2Girz7KbRZzQm9WkmzSQthm7mAtA
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJ8sia2Girz7KbRZzQm9WkmzSQthm7mAtA
+A45925 TMYJy3KXWnjCVcsaf2TVU3DBXU2uZbd97ui
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYJy3KXWnjCVcsaf2TVU3DBXU2uZbd97ui
+A42 TMYuU4rQV6cUJr2GVZKzqkrTsPqjpZwT3zZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYuU4rQV6cUJr2GVZKzqkrTsPqjpZwT3zZ
+A45756 TMFeX6hx6T1XLSNao5racgSgMABFHDfzW88
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFeX6hx6T1XLSNao5racgSgMABFHDfzW88
+A49667 TMQw3wyGmyTiKLyAZaUcEuoikYs8aqFZqoz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQw3wyGmyTiKLyAZaUcEuoikYs8aqFZqoz
+A431 TMQa4tPD71qvbyRdSvBtkQN2LwW3LAWEW3N
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQa4tPD71qvbyRdSvBtkQN2LwW3LAWEW3N
+A49398 TMM8Jsv18AMq9ahgEso3LCPA9YYABn8QutN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMM8Jsv18AMq9ahgEso3LCPA9YYABn8QutN
+A42861 TMEvdRTx8dXAVWEszja4Q9NnsVnHinE6fpn
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEvdRTx8dXAVWEszja4Q9NnsVnHinE6fpn
+A45889 TMYfcLBoUdn6MvC2vkkTQUScxS4owBTC9g9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYfcLBoUdn6MvC2vkkTQUScxS4owBTC9g9
+A48495 TMTeQDMLsMC3dDE7h2DHRxVgSizi8MFsDcx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTeQDMLsMC3dDE7h2DHRxVgSizi8MFsDcx
+A457 TMPEUp8PXqzTWpXNwvAJmq2AkYVVyJDDxrZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPEUp8PXqzTWpXNwvAJmq2AkYVVyJDDxrZ
+A42300 TMTYCG2dmgpCWjAEkUxr3GwnKPeHGVt6Pwz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTYCG2dmgpCWjAEkUxr3GwnKPeHGVt6Pwz
+A49389 TMHGFf9djHhkWEEgH6RNDJ24QjDJ8eU6KAN
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHGFf9djHhkWEEgH6RNDJ24QjDJ8eU6KAN
+A4400 TMJSaGZaPms25ucuvtREAoE9WhG7HrsXgsD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJSaGZaPms25ucuvtREAoE9WhG7HrsXgsD
+A46674 TMF9symp9Yt1A7fuPHMxhiJMb6bcncs9DWX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMF9symp9Yt1A7fuPHMxhiJMb6bcncs9DWX
+A420 TMHjvwkyjpUMkJfr5eThsCCPAu4LPnEbgdT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHjvwkyjpUMkJfr5eThsCCPAu4LPnEbgdT
+A42513 TMNtKjfE8qSMKr6Y1BwcDCoMCLG1xErf3cJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNtKjfE8qSMKr6Y1BwcDCoMCLG1xErf3cJ
+A4799 TMXVWNixmDcvTjs3R6zMboFhSoWVYjKQY3o
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXVWNixmDcvTjs3R6zMboFhSoWVYjKQY3o
+A43699 TMJeCnbE77D54aYmGWnwNo5ohsNhrknrJH6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJeCnbE77D54aYmGWnwNo5ohsNhrknrJH6
+A4736 TMcUQkUPok9ztrzba1GwyYnu95pfyRsmx9m
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcUQkUPok9ztrzba1GwyYnu95pfyRsmx9m
+A53464 TMdT4RdEiVsAeg3pGA4ohdeyu8UEncD5gaz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdT4RdEiVsAeg3pGA4ohdeyu8UEncD5gaz
+A5060 TMLLzwxJacWLZFmxCL3oNcev8jCoRAcH3Kj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLLzwxJacWLZFmxCL3oNcev8jCoRAcH3Kj
+A52832 TMdxuuz73N1G5H2ZTk12EJAxSYCZYBn9NdR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdxuuz73N1G5H2ZTk12EJAxSYCZYBn9NdR
+A52584 TMXEQzccgdWz8bvEjLaKx483sNhGazXGc9b
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXEQzccgdWz8bvEjLaKx483sNhGazXGc9b
+A49670 TMZ6LvRSMgTLX6YsubSnQJDrjAVRxBbtYGC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZ6LvRSMgTLX6YsubSnQJDrjAVRxBbtYGC
+A52482 TMN45hMar7KgxMCU6dV8PSLkaa86Yaqn52Z
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMN45hMar7KgxMCU6dV8PSLkaa86Yaqn52Z
+A53422 TMc1e2LMifLhzxjFBbtyb6KNAu93cQRSpPp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMc1e2LMifLhzxjFBbtyb6KNAu93cQRSpPp
+A49678 TMd8nxdVZ7PAgNKZZPbSLBXJEkuZ7jFWtV4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMd8nxdVZ7PAgNKZZPbSLBXJEkuZ7jFWtV4
+A52606 TMUEgdUm1c666dXwv9PjQzV8LtX5Qc5RHnP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUEgdUm1c666dXwv9PjQzV8LtX5Qc5RHnP
+A52951 TMNCjgnfkhdRFMModZcafoLGX3MzYDgUhEX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNCjgnfkhdRFMModZcafoLGX3MzYDgUhEX
+A5062 TMTBJbU6nsoPCXN9XXVmK3R8pmEfJsQ7NDq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTBJbU6nsoPCXN9XXVmK3R8pmEfJsQ7NDq
+A52850 TMKCk1Sq7JYXPeTeEmKTJNLrBj6rkWuajo4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKCk1Sq7JYXPeTeEmKTJNLrBj6rkWuajo4
+A533 TMP5MGp1YepWHgEL8r8YcB5fF54uj87iy5s
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMP5MGp1YepWHgEL8r8YcB5fF54uj87iy5s
+A52677 TMFzPDjyGJsiJwroUYe7rQmMZZQfSDgBmpS
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFzPDjyGJsiJwroUYe7rQmMZZQfSDgBmpS
+A50621 TMRz6RkvvGotcSCuuY18zsAdnmBL19SyVdh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRz6RkvvGotcSCuuY18zsAdnmBL19SyVdh
+A49668 TMQiPoxeYg5d7tFn4eYygv75quRt1wdS8QQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQiPoxeYg5d7tFn4eYygv75quRt1wdS8QQ
+A52635 TMRzCiEXghesxfXKw3gEHbhtQYkMKYLJ3if
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRzCiEXghesxfXKw3gEHbhtQYkMKYLJ3if
+A52661 TMNRBNjoFF1PCmJCbWtZQSuTZ1VUzi4WExY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNRBNjoFF1PCmJCbWtZQSuTZ1VUzi4WExY
+A53220 TMYspLU8CZuYkPYNy6f98ikjd41TKdj89yr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYspLU8CZuYkPYNy6f98ikjd41TKdj89yr
+A50915 TMV2SuxgRTEL7nkpDJgUTY7Pw2vCBr4ADT6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMV2SuxgRTEL7nkpDJgUTY7Pw2vCBr4ADT6
+A59142 TMYuAoPhLHwZULLXZxr624YkWcKs7P6Eurg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYuAoPhLHwZULLXZxr624YkWcKs7P6Eurg
+A5969 TMKda4Sst2Mw9NCeBA7ABTgeoQcUobHCAQW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKda4Sst2Mw9NCeBA7ABTgeoQcUobHCAQW
+A554 TMc9VLCH9e1abDEsiCtS5pY3k5FQC3H9oBh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMc9VLCH9e1abDEsiCtS5pY3k5FQC3H9oBh
+A58896 TML874bwVadKkqRcsfd4piNT7nqWe91BxE8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TML874bwVadKkqRcsfd4piNT7nqWe91BxE8
+A60365 TMLrDUNoCJmQgK4MSjk7P3dW6VHo1bbhetW
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLrDUNoCJmQgK4MSjk7P3dW6VHo1bbhetW
+A5477 TMRvtZ7kyzcZPGQFYdcGmikFnXwgXCWFYUH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRvtZ7kyzcZPGQFYdcGmikFnXwgXCWFYUH
+A5922 TMHBk8dMYB7WrWX43N1YhqumJNDS3YLXZV4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHBk8dMYB7WrWX43N1YhqumJNDS3YLXZV4
+A59174 TMZtJgRYdddvcoXs84p4FJwxVZnQitgxvG3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZtJgRYdddvcoXs84p4FJwxVZnQitgxvG3
+A53539 TMFno4tdEDbCS1hzsZTY9po29iL9bVwZYu5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFno4tdEDbCS1hzsZTY9po29iL9bVwZYu5
+A5970 TMKyGsJW1JUgCu59jwVxTHv8EKrGSXAsThF
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKyGsJW1JUgCu59jwVxTHv8EKrGSXAsThF
+A59673 TMJHhc36nKCoJYU81PTvwvJBP534rTLvNLU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJHhc36nKCoJYU81PTvwvJBP534rTLvNLU
+A5571 TMKmg78VG8AeLyz6anive2zkYNx2qVfBeGC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKmg78VG8AeLyz6anive2zkYNx2qVfBeGC
+A54605 TMU8knpedK3e77bxgkM6UwoPdBgEtoy9Xvq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMU8knpedK3e77bxgkM6UwoPdBgEtoy9Xvq
+A5968 TMWQCzKvPeoNHneVAoWMsd55XtCaak5FMsq
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWQCzKvPeoNHneVAoWMsd55XtCaak5FMsq
+A54603 TMQSaNG2RvNpGdR6smNaVTtTUU2tkzKabgr
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQSaNG2RvNpGdR6smNaVTtTUU2tkzKabgr
+A5443 TMJWuAjv5zzt4muLVkVZh9g1SxYUabwSm8v
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJWuAjv5zzt4muLVkVZh9g1SxYUabwSm8v
+A58966 TMYQf9RraYbCnFSvf2CAsR8zvBMw1T2yNNb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYQf9RraYbCnFSvf2CAsR8zvBMw1T2yNNb
+A55580 TMJopGVes4SwxyEnBBG4XDAZEjEw3dUQ9pt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJopGVes4SwxyEnBBG4XDAZEjEw3dUQ9pt
+A5442 TMHsDqbwaGULmFdEw9QfhwNBZbhVQ2hwHox
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHsDqbwaGULmFdEw9QfhwNBZbhVQ2hwHox
+A5921 TMdmSYnDerjiUgs4hrsTSv2TkYNeGhTLPzs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdmSYnDerjiUgs4hrsTSv2TkYNeGhTLPzs
+A61787 TMMar6ZUwELFRiHZmLjPQtGyLrpUL9trav6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMar6ZUwELFRiHZmLjPQtGyLrpUL9trav6
+A6231 TMLCw6TRJffvM2m1aaxmFjtXkUDyKWPboTe
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLCw6TRJffvM2m1aaxmFjtXkUDyKWPboTe
+A6234 TMNtRyTuFYyKJUu5hADwv7cCxVm41BqNT4N
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNtRyTuFYyKJUu5hADwv7cCxVm41BqNT4N
+A62119 TMVEB5z9LAP8viNkshjyY1u2kiXLtHqyZYf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVEB5z9LAP8viNkshjyY1u2kiXLtHqyZYf
+A6125 TMKeFmCAuJqKGuHHf1K8mD2rU2VPxao3Rf8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKeFmCAuJqKGuHHf1K8mD2rU2VPxao3Rf8
+A65140 TMd5seZEKU4J5ApxV396jcUd7WM7pk2bvcG
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMd5seZEKU4J5ApxV396jcUd7WM7pk2bvcG
+A64749 TMZwv1FsnMMdmsrBGYbfsCq5rr99soYFAC7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZwv1FsnMMdmsrBGYbfsCq5rr99soYFAC7
+A64752 TMZ8bUHPBEPdAz2Rne2FyEMfrGHdTL7Bdmc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZ8bUHPBEPdAz2Rne2FyEMfrGHdTL7Bdmc
+A6088 TMVPRB7zfeMZSnc24D6Y42Yj9LqMgmxYWki
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVPRB7zfeMZSnc24D6Y42Yj9LqMgmxYWki
+A6483 TMZMjGBa76mF7wjrnPcLtatC7Lxr1RnCUTu
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZMjGBa76mF7wjrnPcLtatC7Lxr1RnCUTu
+A61572 TMZ31yVBVcGz7PRLQ7Bw63aoz4w7gSSQW2E
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZ31yVBVcGz7PRLQ7Bw63aoz4w7gSSQW2E
+A60946 TMFxw1YdiLp3Mq31TKqQNDw3WSyccoPLuP1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFxw1YdiLp3Mq31TKqQNDw3WSyccoPLuP1
+A61788 TMLV5qS7U6Ctz9kULHYjqXuR3mjqg8th4ZC
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLV5qS7U6Ctz9kULHYjqXuR3mjqg8th4ZC
+A64671 TMXCAHLHowiYJv2CKGD7zoYY1b6vw7A5zYT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXCAHLHowiYJv2CKGD7zoYY1b6vw7A5zYT
+A62395 TMWcF6XRuWM9yZHhjRQmqvhoL5ogFEJGaZs
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWcF6XRuWM9yZHhjRQmqvhoL5ogFEJGaZs
+A61705 TMP9MoykWkKtTpy8wjmte5rN5TzKMTCJcRg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMP9MoykWkKtTpy8wjmte5rN5TzKMTCJcRg
+A6105 TMEi3FF5FJJd8BNkFULCyeh8rb1xUEWCphv
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEi3FF5FJJd8BNkFULCyeh8rb1xUEWCphv
+A6523 TMVfcDPdjvqGxo1yDnno45D6XiGzKNMdKi9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVfcDPdjvqGxo1yDnno45D6XiGzKNMdKi9
+A61062 TMcXtjn5EhbvgW8dqicwBapqeN47jheuAqi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcXtjn5EhbvgW8dqicwBapqeN47jheuAqi
+A65142 TMVSArshdp18haNDXun4H3zsZuWpCQzWoL8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVSArshdp18haNDXun4H3zsZuWpCQzWoL8
+A74516 TMbDqeBgaE39d9CYzSaKBWpPYR1GxDAcfdt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbDqeBgaE39d9CYzSaKBWpPYR1GxDAcfdt
+A71952 TMUSeCinhxiyDxuVVoAWWPAcKwcG4bN3yA7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUSeCinhxiyDxuVVoAWWPAcKwcG4bN3yA7
+A69015 TMS7h5VpLmQzdKUU4HLCyeSp2Xue7qy35fc
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMS7h5VpLmQzdKUU4HLCyeSp2Xue7qy35fc
+A74543 TMXDi3b3uP7iyoGZJe4h4twigiqduCrRsew
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXDi3b3uP7iyoGZJe4h4twigiqduCrRsew
+A74524 TMQrLMstPjAnH4veAXyXJ5qu212LRwVvwsb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQrLMstPjAnH4veAXyXJ5qu212LRwVvwsb
+A74542 TMZ8nJxGxAm23iWMXEYdfJ9mCPeXWGJfDky
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZ8nJxGxAm23iWMXEYdfJ9mCPeXWGJfDky
+A74556 TMTkmZoiEmHinEiU6Apn7XcHvw96YzY3YGV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTkmZoiEmHinEiU6Apn7XcHvw96YzY3YGV
+A70969 TMUxpu2CF3Xfurxn7JXdmGZn9Le2jwBJgGb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUxpu2CF3Xfurxn7JXdmGZn9Le2jwBJgGb
+A74546 TMMys1CEvuaLdpUn4EUkkuYxmHwyms3C5yt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMys1CEvuaLdpUn4EUkkuYxmHwyms3C5yt
+A74503 TMQ6eDJrNnQgq95pf6DhQx7p6mx9ngRQF6U
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQ6eDJrNnQgq95pf6DhQx7p6mx9ngRQF6U
+A6675 TMEi2VVQ55YqDqUuTh2aaYtLEw1tER2tniM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEi2VVQ55YqDqUuTh2aaYtLEw1tER2tniM
+A73554 TMYb9fdJePE21w8ohmqhDMzPy9Qbq4QWy8F
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYb9fdJePE21w8ohmqhDMzPy9Qbq4QWy8F
+A6625 TMbQ5C8QXXFoLEFWGtBus4qBcs7if6t4KNf
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbQ5C8QXXFoLEFWGtBus4qBcs7if6t4KNf
+A74525 TMZgyGEY9XAJWwbqpsTBuqUwoy6EEVXvJmv
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZgyGEY9XAJWwbqpsTBuqUwoy6EEVXvJmv
+A74533 TMbuoYsQSjAh3hjv8KAeBh7Ku4uvoDPfy4Z
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbuoYsQSjAh3hjv8KAeBh7Ku4uvoDPfy4Z
+A66237 TMSPe8heNzfNdaseSZapn6eB8UyPrc3E9TP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSPe8heNzfNdaseSZapn6eB8UyPrc3E9TP
+A73588 TMLhiSBkJeWLHpQsvPCgnVvz5anGhdzwQLp
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLhiSBkJeWLHpQsvPCgnVvz5anGhdzwQLp
+A74539 TMHeaw7PzmGNQVouPzHcAgAJMCDWgeQmr4M
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHeaw7PzmGNQVouPzHcAgAJMCDWgeQmr4M
+A71539 TMMupMqcdUyHTSbs8Dwf1Pp59HTMTyxC4F5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMupMqcdUyHTSbs8Dwf1Pp59HTMTyxC4F5
+A6646 TMJb99X4G3gdaswT5MjWtFgUGKMxfv7tjVw
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJb99X4G3gdaswT5MjWtFgUGKMxfv7tjVw
+A7559 TMbsB6CjTGfA14gSK75SykBPw5PxmCp8RWZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbsB6CjTGfA14gSK75SykBPw5PxmCp8RWZ
+A74618 TMVSkzG9r3XQH85mqKXkhP96JsCevfJNvm1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVSkzG9r3XQH85mqKXkhP96JsCevfJNvm1
+A7487 TMcYQjhzNR5nzDMJQJVjprw9ajNrwssrkbT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcYQjhzNR5nzDMJQJVjprw9ajNrwssrkbT
+A74557 TMPbbeWPh6ZTKDNGKjnoYUNfmgPsvPDL2sa
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPbbeWPh6ZTKDNGKjnoYUNfmgPsvPDL2sa
+A74567 TMJSYu5k4CPqmfWKJ1ZpRsL2sGSiFM62anP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJSYu5k4CPqmfWKJ1ZpRsL2sGSiFM62anP
+A74614 TMRejBvX1rPZMsZ3tKsWgxKekXmCLCGJ9xL
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRejBvX1rPZMsZ3tKsWgxKekXmCLCGJ9xL
+A74612 TMHBgGXPRSXdSaJSXSg74ZMChDzgyPvcn4g
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHBgGXPRSXdSaJSXSg74ZMChDzgyPvcn4g
+A774 TMGW45S3bj8KkZXnyA4o6sfCXiKH6rPkVGj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGW45S3bj8KkZXnyA4o6sfCXiKH6rPkVGj
+A7667 TMPfmX85mcR1diyv2H3Jm557Hj1wQHRheN1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPfmX85mcR1diyv2H3Jm557Hj1wQHRheN1
+A74575 TMZWLXz99XSxsqqAgzFyahdeTnT1xNBJ8fB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZWLXz99XSxsqqAgzFyahdeTnT1xNBJ8fB
+A77412 TMJXjPJTSjmMjJEHwZm1jBz1VFxUQrcZVzj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJXjPJTSjmMjJEHwZm1jBz1VFxUQrcZVzj
+A74564 TMG2gU9Q6fhaUdvJa3JnsL4ofdmwXPRSeCv
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMG2gU9Q6fhaUdvJa3JnsL4ofdmwXPRSeCv
+A79472 TMacgTcARoeAuGdHnVGTpUPt6Syi97Sa6st
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMacgTcARoeAuGdHnVGTpUPt6Syi97Sa6st
+A7574 TMbEDcBhvVsqU3Jz3g3yjY6smtusrkXufss
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMbEDcBhvVsqU3Jz3g3yjY6smtusrkXufss
+A7566 TMXhgBdGSWmZ2oBpoWWK8mRnn4e7XLNQwS3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXhgBdGSWmZ2oBpoWWK8mRnn4e7XLNQwS3
+A79863 TMTyCzk2JNM2MB317uQJbJ35Br6Z9ucnAZt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTyCzk2JNM2MB317uQJbJ35Br6Z9ucnAZt
+A74580 TMWKXBfcYq8VBrjzq9HTJhM4geZPzUVxFYo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWKXBfcYq8VBrjzq9HTJhM4geZPzUVxFYo
+A7489 TMPh5sYBvU1NnAaN6PAFaV4hRp6LDfjCgzQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPh5sYBvU1NnAaN6PAFaV4hRp6LDfjCgzQ
+A779 TMXaeTc3j4puvWiNKVtd6sXP11sKz8yws2c
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXaeTc3j4puvWiNKVtd6sXP11sKz8yws2c
+A7611 TMQtpyqsCbFmXNMpAiNT3Xy4c16KAeo6h1j
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQtpyqsCbFmXNMpAiNT3Xy4c16KAeo6h1j
+A83672 TMUyuWTZFzjzoepY3cby5xcrYdZjvysHQh5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUyuWTZFzjzoepY3cby5xcrYdZjvysHQh5
+A81076 TMY7U9CKa4fPAyGd7YLhcsTqvq4S6uqRMjT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMY7U9CKa4fPAyGd7YLhcsTqvq4S6uqRMjT
+A81627 TMHu5rJABLpAw4epY71x9U2MTWHB88ejr8o
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHu5rJABLpAw4epY71x9U2MTWHB88ejr8o
+A83297 TMTjMQACszrSmuPvgaowpZxYzDtdNe8MFYE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTjMQACszrSmuPvgaowpZxYzDtdNe8MFYE
+A83812 TMYStzQaRu8oNxxsVLgPxMLmKVHi41VwXdT
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYStzQaRu8oNxxsVLgPxMLmKVHi41VwXdT
+A82113 TMNiCa1dewK38K6Xbk6typC5JcrxGyrnPxX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNiCa1dewK38K6Xbk6typC5JcrxGyrnPxX
+A81106 TMPxHSfRbvS4kGtVcRMLm62Bp2k9XBvgRWF
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPxHSfRbvS4kGtVcRMLm62Bp2k9XBvgRWF
+A81656 TMMLJX4CkgDjvhqh8T59beMd5Ptnnt2Gpab
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMLJX4CkgDjvhqh8T59beMd5Ptnnt2Gpab
+A83421 TMWZL9uUMsdwXSmM3zK5R4iydXUWUjSBUn6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMWZL9uUMsdwXSmM3zK5R4iydXUWUjSBUn6
+A82032 TMYhD81eCsdo66LpBRn25fDxqHAW8tmmCs1
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYhD81eCsdo66LpBRn25fDxqHAW8tmmCs1
+A84057 TMNEaeZ4cae3nXGzQuuHq5wf18YULdraPjY
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNEaeZ4cae3nXGzQuuHq5wf18YULdraPjY
+A83043 TMLjnyVBRL7UJ8JNwFyuFTvP6Gfgm2SAHfV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLjnyVBRL7UJ8JNwFyuFTvP6Gfgm2SAHfV
+A81127 TMQisogvEomVC5T3eeGj6j7ghJiMFew1ZFt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQisogvEomVC5T3eeGj6j7ghJiMFew1ZFt
+A81045 TMMEXLRTJKnaoJweUE3RV5bUYANARPRY4cB
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMEXLRTJKnaoJweUE3RV5bUYANARPRY4cB
+A8353 TMcQfzq8gsmnaZoPnWL391Qjpm9XWfovM6X
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMcQfzq8gsmnaZoPnWL391Qjpm9XWfovM6X
+A81655 TMRFBQkDLtN3ftRbNxfqBodxPxEnqy6MCSP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRFBQkDLtN3ftRbNxfqBodxPxEnqy6MCSP
+A84244 TMe1LymHMY9QoH384j1FtXbYnLStMP2Cvrt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMe1LymHMY9QoH384j1FtXbYnLStMP2Cvrt
+A80250 TMQSCjsZzGwMmAFpU2sYPpLwovcsj5Wjmpn
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQSCjsZzGwMmAFpU2sYPpLwovcsj5Wjmpn
+A82471 TMaDiqCQb53w3yHWmPKaGpFRb2E8nb7NUJ4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMaDiqCQb53w3yHWmPKaGpFRb2E8nb7NUJ4
+A81065 TMFRV2C3QhfbcosZzqNv29yUpk8pmatnc2z
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFRV2C3QhfbcosZzqNv29yUpk8pmatnc2z
+A90313 TMJ87xVYabV9wd1upqkSw2uasuVTfaFHy1Z
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJ87xVYabV9wd1upqkSw2uasuVTfaFHy1Z
+A85353 TMVpGXqcDAFu1C6Dh8xgFQ8nZTif8DREwfj
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVpGXqcDAFu1C6Dh8xgFQ8nZTif8DREwfj
+A8548 TMLeJQXpzDYxxs9v66qsP1u4wvHjwzD9jLM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLeJQXpzDYxxs9v66qsP1u4wvHjwzD9jLM
+A85449 TMSyuZZSohkaJA9JvRimFFJVL1i7SPPNTMz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSyuZZSohkaJA9JvRimFFJVL1i7SPPNTMz
+A86984 TMXHVXN7P7EQMjzrSAZh9J8UPmccZrmrcj7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXHVXN7P7EQMjzrSAZh9J8UPmccZrmrcj7
+A8542 TMdj9pq86cMGjKmKMGovZwN8f8BDzzKw4Fi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdj9pq86cMGjKmKMGovZwN8f8BDzzKw4Fi
+A87287 TMH9t1Ew3RfinQWsWNwFRYKFj3JFq8U4qE9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMH9t1Ew3RfinQWsWNwFRYKFj3JFq8U4qE9
+A87547 TMS7pEWqVYnBU4TF6oxEKP7Fs8FtuazrwVJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMS7pEWqVYnBU4TF6oxEKP7Fs8FtuazrwVJ
+A88229 TMGwGs9Y8aVJFKEzA81DhYvtaaxWZUzNf3b
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGwGs9Y8aVJFKEzA81DhYvtaaxWZUzNf3b
+A8546 TMLQJRHnoXY3JKmgU5skTFwA5XTyaC6Jhs9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLQJRHnoXY3JKmgU5skTFwA5XTyaC6Jhs9
+A8843 TMU9qN2A6qt5TiyB6BBcoYHPNj6pVdWEfp3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMU9qN2A6qt5TiyB6BBcoYHPNj6pVdWEfp3
+A8543 TMSXX6GTCGaX6asepYPiZ2nAEHYxtmStLDx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSXX6GTCGaX6asepYPiZ2nAEHYxtmStLDx
+A8845 TMY1iMVNCCrzhS9BtPtmC9bbgAvUZnRMLNy
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMY1iMVNCCrzhS9BtPtmC9bbgAvUZnRMLNy
+A89252 TMYZP3baYbjGyTEki8gHtJGa33fBQBMrovV
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMYZP3baYbjGyTEki8gHtJGa33fBQBMrovV
+A8544 TML8CPPJoWnEXLVjVhBkHPVs3DxFEx4wzbd
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TML8CPPJoWnEXLVjVhBkHPVs3DxFEx4wzbd
+A86948 TMKiMPADQYAePSRUuijWsySM9a9Q19iikwK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKiMPADQYAePSRUuijWsySM9a9Q19iikwK
+A90306 TMNCSXXASaPFVVtkZsv4o7tRKSgLkSk4tBv
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNCSXXASaPFVVtkZsv4o7tRKSgLkSk4tBv
+A88920 TMZKuyPALkVqF6Q6CFiRz6einJTY3sAQuhR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZKuyPALkVqF6Q6CFiRz6einJTY3sAQuhR
+A86942 TMJnLisiNqR4yvXu1N7if4UwxcsqofppZU7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJnLisiNqR4yvXu1N7if4UwxcsqofppZU7
+A8545 TMPL2ocfgGvLE1Z7BCkn2yCWBJdbeHJKUV3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPL2ocfgGvLE1Z7BCkn2yCWBJdbeHJKUV3
+A9120 TMQwKFmBMPHwKSPnXHHY1sirUYtpt9U4tru
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQwKFmBMPHwKSPnXHHY1sirUYtpt9U4tru
+A95807 TMHLibArZa3Qx9spgD8y3DrbRJPNb4e81f6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHLibArZa3Qx9spgD8y3DrbRJPNb4e81f6
+A97039 TMVEN3YYaA3CFqY6WEmP9yfxsVzyAMrgwZd
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVEN3YYaA3CFqY6WEmP9yfxsVzyAMrgwZd
+A93130 TMSYGB8o664rUUtPbNbDv6F6qLUb67B57pK
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSYGB8o664rUUtPbNbDv6F6qLUb67B57pK
+A91045 TMK6DwtpVpWodsb91UjQFwe3s6Xy1nVh8WP
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMK6DwtpVpWodsb91UjQFwe3s6Xy1nVh8WP
+A97422 TMapzYLEhUvSorQF81UFERAdG5hLVuxhni4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMapzYLEhUvSorQF81UFERAdG5hLVuxhni4
+A92170 TMLCKW1uXMhS8KKcAyRe5XbSATuWEUG3A79
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLCKW1uXMhS8KKcAyRe5XbSATuWEUG3A79
+A9445 TMPy3SYswtSFbbarS7DsMB18ygjtGEw3RB6
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPy3SYswtSFbbarS7DsMB18ygjtGEw3RB6
+A95917 TMHRBGAJSorkHLf5Jd7RJkYRAPW38JWoin5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHRBGAJSorkHLf5Jd7RJkYRAPW38JWoin5
+A95937 TMV6JpMoKmzPTke5oan5Ca8xosqmUxUKh52
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMV6JpMoKmzPTke5oan5Ca8xosqmUxUKh52
+A97725 TMQnK86fYiZPDDEQn5g1Fm4ps8sBF1oyJyb
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQnK86fYiZPDDEQn5g1Fm4ps8sBF1oyJyb
+A97726 TMXExDjZu3F2pLLZeWVRdajpMpRzMb9HUCh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXExDjZu3F2pLLZeWVRdajpMpRzMb9HUCh
+A906 TMXZfS6wTPhADYg9a5JKEPdRXQaKESSWicQ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXZfS6wTPhADYg9a5JKEPdRXQaKESSWicQ
+A93967 TMZWzGn6WAyGQ2tYcKpnANoJyas2xA2uGaR
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZWzGn6WAyGQ2tYcKpnANoJyas2xA2uGaR
+A97309 TMUHFjwzuDU6MYppFfXbC9n3DTbiWBKTAEi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUHFjwzuDU6MYppFfXbC9n3DTbiWBKTAEi
+A97316 TMPDzMPHPioKjBFikskU1BvWNAGZjwKy1kM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPDzMPHPioKjBFikskU1BvWNAGZjwKy1kM
+A94797 TMZFiMofzdt4VVJpTw2vsQmfddKzQcqgLwo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZFiMofzdt4VVJpTw2vsQmfddKzQcqgLwo
+A97727 TMJ9euB7Eqi4cGKQ5BdRoFYKyvhR5cPmBWX
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJ9euB7Eqi4cGKQ5BdRoFYKyvhR5cPmBWX
+A91914 TMKSPLAq9fxzyyaUHsYUPcAGqCVyDPVXnkE
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKSPLAq9fxzyyaUHsYUPcAGqCVyDPVXnkE
+A91038 TMNM4u6sxAcZ9dptWUceFgrNsg4h6kSZV9o
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNM4u6sxAcZ9dptWUceFgrNsg4h6kSZV9o
+A9971 TMEuvNWbwEt9wnZaT96YCxGpGwext7F3C17
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMEuvNWbwEt9wnZaT96YCxGpGwext7F3C17
+A9972 TMGdvDX61JCPn57svJBeokzXvKtBR7h9kSg
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMGdvDX61JCPn57svJBeokzXvKtBR7h9kSg
+A9966 TMVKX9o83vKYvh9ZY14fTjposVjoYkiG4nH
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVKX9o83vKYvh9ZY14fTjposVjoYkiG4nH
+A9974 TMNAXHV1H2PFYFongtJrAjsa5Lr5Nbt5ub3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMNAXHV1H2PFYFongtJrAjsa5Lr5Nbt5ub3
+A9964 TMZAMVaGHwB6nd99UQLGYim6xJqKZpseiC7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMZAMVaGHwB6nd99UQLGYim6xJqKZpseiC7
+A97816 TMPwtcEktRuxmpN82wYk2Ekdnaz1VsaswFi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPwtcEktRuxmpN82wYk2Ekdnaz1VsaswFi
+A97830 TMRiX4J4YSh18C4HdSN9N1M6kC1wJFjp6vz
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRiX4J4YSh18C4HdSN9N1M6kC1wJFjp6vz
+A97770 TMLeXxgqUMbZcV6FhAxY62SuX4v8w7eRhg2
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLeXxgqUMbZcV6FhAxY62SuX4v8w7eRhg2
+A98255 TMX9kHurSHptVeDjnKbihiLFk85b4sA2cn5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMX9kHurSHptVeDjnKbihiLFk85b4sA2cn5
+A9973 TMPNrDsje7ALGM1fdgUo3M3QSTEDsCwZcE9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPNrDsje7ALGM1fdgUo3M3QSTEDsCwZcE9
+A98127 TMJwBSgQA6LxfPWpo1wuT7yXF9NJbwEUzg4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJwBSgQA6LxfPWpo1wuT7yXF9NJbwEUzg4
+A9969 TMY5HPHn5HM9bXyssZnxTpEkQUiYV2UNr6q
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMY5HPHn5HM9bXyssZnxTpEkQUiYV2UNr6q
+A98251 TMdcCCZsYtXbcSAxYULNUTu8jjNXSAJuJpt
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdcCCZsYtXbcSAxYULNUTu8jjNXSAJuJpt
+A99035 TMFTVeqvUFFhCsyThMpZnUEZ4XB5NXLgWho
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMFTVeqvUFFhCsyThMpZnUEZ4XB5NXLgWho
+A98533 TMUf5L9V6SXM9cH7qEZ5tMnijAWsNUWter4
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMUf5L9V6SXM9cH7qEZ5tMnijAWsNUWter4
+A97775 TMVbkMCD9xiCW7zyVxj9RHokssDGTGeNwXo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVbkMCD9xiCW7zyVxj9RHokssDGTGeNwXo
+A97781 TMP3hBwyuVrECzvp5iJwns4Wjht7n2nRYGa
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMP3hBwyuVrECzvp5iJwns4Wjht7n2nRYGa
+A98261 TMXyisNUe7PBG6hc6TVgq8sDhKBJ7tnwyXJ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXyisNUe7PBG6hc6TVgq8sDhKBJ7tnwyXJ
+A97843 TMXpFcnrsu29kzfdjrXZwyp388Ty7QmNVCM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXpFcnrsu29kzfdjrXZwyp388Ty7QmNVCM
+A98249 TMJn4VvBz9evvig69nrB9ryHdUPfFB9UHZ9
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMJn4VvBz9evvig69nrB9ryHdUPfFB9UHZ9
+A9984 TML5gM2xw1tXPtT7NJLTs2TeMUWEjBGywp3
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TML5gM2xw1tXPtT7NJLTs2TeMUWEjBGywp3
+A9983 TMQcQMGWo1RXbyP4KtYrUPuH85n82ujTw7m
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQcQMGWo1RXbyP4KtYrUPuH85n82ujTw7m
+A9980 TMRY3SAhQAS7QfNYKq29Egot3rbrfsJXhnU
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMRY3SAhQAS7QfNYKq29Egot3rbrfsJXhnU
+A9978 TMKmJp5xkN1JyuQ2ahSV9BPMrNswHXnepTi
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMKmJp5xkN1JyuQ2ahSV9BPMrNswHXnepTi
+A99953 TMPqjAVqHuMc75atyVdpV45u9guHvR5wu5C
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMPqjAVqHuMc75atyVdpV45u9guHvR5wu5C
+A9991 TMdPUCpSSVjdW2J4oG966e3bFyG7DTrocD8
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdPUCpSSVjdW2J4oG966e3bFyG7DTrocD8
+A9981 TMSsLLaY2rCkqpc9dZeFbp4uwJDwEhAFroD
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMSsLLaY2rCkqpc9dZeFbp4uwJDwEhAFroD
+A9990 TMP262UfwjsAtmsqJR2tJHszyZ3uDmLeHGx
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMP262UfwjsAtmsqJR2tJHszyZ3uDmLeHGx
+A9986 TMVBPbu7JS1Tom9rKG4BR4JLkSBszekFywo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVBPbu7JS1Tom9rKG4BR4JLkSBszekFywo
+A9977 TMQrkG8Vmrj8jEpZd3AD7HjDwZ621Z8UFZA
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMQrkG8Vmrj8jEpZd3AD7HjDwZ621Z8UFZA
+A9987 TMMprSbwYzgLga7cLDcNP33NHBAtBdmsSbZ
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMprSbwYzgLga7cLDcNP33NHBAtBdmsSbZ
+A9989 TMHmfZHFBK7X2D2Ln7FuBdUC5WiTCkZLP9q
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMHmfZHFBK7X2D2Ln7FuBdUC5WiTCkZLP9q
+A9979 TMM3RFJCWBE3oArXuwKUMcXEFEVPMTjjRkM
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMM3RFJCWBE3oArXuwKUMcXEFEVPMTjjRkM
+A9988 TMTgeoJqt8RuHT5HPFCqjWCNjruhtauQxjo
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMTgeoJqt8RuHT5HPFCqjWCNjruhtauQxjo
+A9985 TMLZBX7X8Ep8r8sDehs8uMuc4PNGqdkus5P
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMLZBX7X8Ep8r8sDehs8uMuc4PNGqdkus5P
+A9976 TMdYYcD4LT6nrboG3BLd4QxNbuF1TUiQDi5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMdYYcD4LT6nrboG3BLd4QxNbuF1TUiQDi5
+A9975 TMXDZ1RQZd7sSnesnjBZxQ4pVutZedBFTyh
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMXDZ1RQZd7sSnesnjBZxQ4pVutZedBFTyh
+A9982 TMMUKtxT2dCQvL2odsnz4CRgXt9GHiBCbqe
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMMUKtxT2dCQvL2odsnz4CRgXt9GHiBCbqe
+A9992 TMVJwR51i8gUjmCvhNJZyj8KBr989NWaoa7
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMVJwR51i8gUjmCvhNJZyj8KBr989NWaoa7
+A99924 TMajkYe7QRXQXjW6ryXyyVkWv4Le6d7mXk5
+https://project-smart.uibk.ac.at/pgbce/q.php?b=TMajkYe7QRXQXjW6ryXyyVkWv4Le6d7mXk5
